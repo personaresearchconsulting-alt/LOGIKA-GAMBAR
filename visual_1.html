@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="id" oncontextmenu="return false" onselectstart="return false">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>CAT LATIHAN KECERDASAN POLRI (50 SOAL VISUAL) - Persona Research & Consulting</title>
+    
+    <!-- Fonts & Libraries -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <style>
+        :root { 
+            --navy: #0b2340; 
+            --gold: #d4a017; 
+            --bg: #f8fafc; 
+            --gray: #f1f5f9; 
+            --danger: #c0392b; 
+            --btn-shadow: #cbd5e1; 
+        }
+        * { 
+            box-sizing: border-box; 
+            -webkit-user-select: none; 
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none; 
+        }
+        body { 
+            font-family: 'Inter', 'Segoe UI', sans-serif; 
+            background: var(--bg); 
+            margin: 0; 
+            padding: 0; 
+            color: #1e293b; 
+        }
+
+        /* HEADER MASTER */
+        header { 
+            background: var(--navy); 
+            color: white; 
+            padding: 15px 5%; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            border-bottom: 4px solid var(--gold); 
+        }
+        .header-title h1 { margin: 0; font-size: 18px; color: #fff; }
+        .header-title p { margin: 3px 0 0; font-size: 11px; color: var(--gold); font-weight: bold; }
+        .timer-badge { font-size: 20px; font-weight: bold; color: var(--gold); font-family: monospace; }
+
+        .container { max-width: 950px; margin: 20px auto; padding: 0 15px; }
+        .card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+
+        /* INPUT / LOGIN SECTION */
+        .user-card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; }
+        .user-card input { width: 80%; max-width: 400px; padding: 12px; font-size: 16px; border: 2px solid #cbd5e1; border-radius: 8px; text-align: center; margin-top: 15px; outline: none; display: block; margin-left: auto; margin-right: auto; }
+        
+        /* OPTION CARDS */
+        .opt { padding: 14px; margin: 8px 0; border: 2px solid #e2e8f0; border-radius: 8px; cursor: pointer; transition: 0.2s; background: #fff; text-align: left; line-height: 1.5; font-size: 14px; display: flex; align-items: center; gap: 12px; }
+        .opt:hover { background: #f1f5f9; border-color: var(--navy); }
+        .opt.selected { background: #e0f2fe; border-color: var(--navy); font-weight: bold; }
+
+        /* NAVIGASI SOAL GRID */
+        .nav-grid { display: grid; grid-template-columns: repeat(10, 1fr); gap: 6px; margin-top: 15px; }
+        .nav-item { height: 35px; display: flex; align-items: center; justify-content: center; border: 1px solid #cbd5e1; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: bold; }
+        .nav-item.filled { background: var(--navy); color: white; }
+        .nav-item.active { border: 2px solid var(--gold); }
+
+        /* BUTTONS */
+        .btn { background: var(--navy); color: white; border: none; padding: 12px 24px; border-radius: 8px; cursor: pointer; font-weight: bold; text-decoration: none; text-align: center; display: inline-block; }
+        .btn-gold { background: var(--gold); color: var(--navy); }
+        .btn-green { background: #27ae60; color: white; }
+        .btn-danger { background: var(--danger); color: white; }
+
+        /* REKAP & RESULT AREA */
+        .final-box { background: var(--navy); color: #fff; padding: 25px; border-radius: 16px; text-align: center; margin-bottom: 25px; }
+        .final-val { font-size: 56px; font-weight: 900; color: var(--gold); margin: 10px 0; }
+
+        /* PEMBAHASAN CONTAINER */
+        .review-item { background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 15px; margin-bottom: 15px; }
+        .review-item.correct { border-left: 6px solid #27ae60; }
+        .review-item.incorrect { border-left: 6px solid var(--danger); }
+        .pembahasan-box { background: #f1f5f9; padding: 12px; border-radius: 6px; margin-top: 10px; font-size: 13px; border-left: 3px solid var(--gold); }
+
+        /* VISUAL MEDIA */
+        .visual-container { margin: 15px 0; text-align: center; background: #fafafa; border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px; overflow-x: auto; }
+        .visual-container svg { max-width: 100%; height: auto; display: inline-block; }
+    </style>
+</head>
+<body>
+
+<div id="captureArea">
+    <!-- MASTER HEADER -->
+    <header id="masterHeader">
+        <div class="header-title">
+            <h1 id="headerMainTitle">PERSONA RESEARCH & CONSULTING</h1>
+            <p id="headerSubTitle">CAT SELEKSI POLRI - TES KECERDASAN VISUAL (50 SOAL)</p>
+        </div>
+        <div id="timer" class="timer-badge">60:00</div>
+    </header>
+
+    <div class="container">
+        <!-- SECTION 1: START / IDENTITAS -->
+        <div id="sec-start" class="user-card">
+            <h2 style="margin:0; color:var(--navy);">IDENTITAS PESERTA TES KECERDASAN POLRI</h2>
+            <p style="font-size:14px; color:#64748b; margin-top:5px;">Soal Tes Kecerdasan Visual 50 Soal (Denah & Arah, Logika Figural, Numerik, & Analogi Verbal).</p>
+            <input type="text" id="inputNama" placeholder="Masukkan Nama Lengkap Peserta..." autocomplete="off">
+            <br>
+            <button class="btn btn-gold" style="font-size: 18px; padding: 15px 40px;" onclick="startFullSimulation()">MULAI SIMULASI CAT</button>
+        </div>
+
+        <!-- SECTION 2: TES KECERDASAN -->
+        <div id="sec-kecerdasan" style="display:none;">
+            <div style="display:flex; gap:20px; flex-wrap:wrap;">
+                <div style="flex:3; min-width:300px;">
+                    <div class="card">
+                        <div id="k-q-no" style="font-weight:bold; color:var(--navy); margin-bottom:10px;">Soal 1 dari 50</div>
+                        <div id="k-q-text" style="font-size:15px; line-height:1.6; margin-bottom:15px;"></div>
+                        <div id="k-q-media" class="visual-container" style="display:none;"></div>
+                        <div id="k-options"></div>
+                        <div style="margin-top:25px; display:flex; justify-content:space-between;">
+                            <button class="btn" onclick="prevQ_Kecerdasan()" style="background:#64748b">Sebelumnya</button>
+                            <button class="btn" id="k-btn-next" onclick="nextQ_Kecerdasan()">Selanjutnya</button>
+                        </div>
+                    </div>
+                </div>
+                <div style="flex:1; min-width:250px;">
+                    <div class="card" style="padding:15px;">
+                        <div style="text-align:center; font-size:12px; font-weight:bold; margin-bottom:10px;">NAVIGASI SOAL KECERDASAN</div>
+                        <div id="k-navGrid" class="nav-grid"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 5: HASIL / REKAP AKHIR -->
+        <div id="sec-result" style="display:none;">
+            <div class="card">
+                <div style="text-align:center; border-bottom:2px solid #eee; padding-bottom:15px; margin-bottom:20px;">
+                    <h2 style="margin:0; color:var(--navy);">LAPORAN HASIL AKHIR TES KECERDASAN</h2>
+                    <p style="margin:5px 0 0; color:var(--gold); font-weight:bold;">PERSONA RESEARCH & CONSULTING - WA: 0877 425 5786</p>
+                </div>
+
+                <div id="resNamaPeserta" style="background:#eef6ff; padding:15px; border-radius:12px; margin-bottom:25px; font-weight:bold; font-size:18px; color:var(--navy); text-align:center;">
+                    NAMA PESERTA: -
+                </div>
+
+                <div class="final-box">
+                    <div>NILAI AKHIR TES KECERDASAN POLRI</div>
+                    <div class="final-val" id="resValKecerdasan">0.00</div>
+                    <div style="font-size: 14px; opacity: 0.9;" id="resDetailKecerdasan">Jawaban Benar: 0 / 50 Soal</div>
+                </div>
+
+                <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:20px;">
+                    <button id="btnDownload" class="btn btn-green" style="flex:1; padding:15px;" onclick="downloadFullPDF()">📥 DOWNLOAD HASIL (PDF)</button>
+                    <button class="btn btn-gold" style="flex:1; padding:15px;" onclick="showReviewSection()">📖 LIHAT PEMBAHASAN SOAL</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 6: PEMBAHASAN / REVIEW -->
+        <div id="sec-review" style="display:none;">
+            <div class="card">
+                <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:2px solid #eee; padding-bottom:15px; margin-bottom:20px;">
+                    <h2 style="margin:0; color:var(--navy);">PEMBAHASAN & EVALUASI SOAL</h2>
+                    <div style="display:flex; gap:10px;">
+                        <button id="btnDownloadReview" class="btn btn-green" onclick="downloadReviewPDF()">📥 DOWNLOAD PEMBAHASAN (PDF)</button>
+                        <button class="btn" onclick="showSection('result')">Kembali ke Hasil</button>
+                    </div>
+                </div>
+                
+                <div id="reviewCaptureArea">
+                    <div style="text-align:center; margin-bottom:20px; border-bottom:2px solid var(--navy); padding-bottom:10px;">
+                        <h3 style="margin:0; color:var(--navy);">DOKUMEN PEMBAHASAN LENGKAP HASIL CAT KECERDASAN</h3>
+                        <p id="reviewNamaPeserta" style="margin:5px 0 0; color:var(--gold); font-weight:bold;">PESERTA: -</p>
+                    </div>
+
+                    <h3 style="color:var(--navy); border-bottom:2px solid var(--gold); padding-bottom:5px;">EVALUASI 50 SOAL KECERDASAN POLRI</h3>
+                    <div id="reviewContainerKecerdasan"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Security Expiration Control
+    const EXPIRATION_DATE = new Date("2026-12-31T23:59:59").getTime();
+    if (Date.now() > EXPIRATION_DATE) {
+        document.body.innerHTML = "<h1 style='text-align:center;margin-top:20%;color:red;'>LISENSI SIMULASI SUDAH KADALUARSA (EXPIRED).<br>Silahkan Hubungi Persona Research & Consulting (WA: 0877 425 5786).</h1>";
+    }
+
+    const APP_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyFxmO0ocvr5HqK2WuGyjt7_JeTOcs4vGDg7QZejeiE2QvCP_qkonJcZc5hz9AFW2Vg/exec";
+
+    let currentSection = "start";
+    let pCode = "";
+    let pPin = "";
+    let pName = "";
+    let currentSessionId = "";
+    let sessionStartTimeStr = "";
+    let sessionStartTimeMs = 0;
+
+    let timerInterval = null;
+    let timerLeft = 0;
+
+    let simulationResult = {
+        kecerdasan: { userAns: {}, benar: 0, skor: 0 }
+    };
+
+    let isResultSubmitted = false;
+
+    function formatTimeObj(dateObj) {
+        let h = String(dateObj.getHours()).padStart(2, '0');
+        let m = String(dateObj.getMinutes()).padStart(2, '0');
+        let s = String(dateObj.getSeconds()).padStart(2, '0');
+        return h + ":" + m + ":" + s;
+    }
+
+    function initSessionOnStart(namaPeserta, kodeSiswa, pinPeserta) {
+        pName = namaPeserta;
+        pCode = kodeSiswa || "";
+        pPin = pinPeserta || "";
+
+        let existingSession = sessionStorage.getItem("prc_session_id");
+        let existingStartStr = sessionStorage.getItem("prc_start_time_str");
+        let existingStartMs = sessionStorage.getItem("prc_start_time_ms");
+
+        if (!existingSession || !existingStartStr) {
+            let counterKey = "prc_counter_" + (pCode || "default");
+            let lastNum = parseInt(localStorage.getItem(counterKey) || "0", 10) + 1;
+            localStorage.setItem(counterKey, lastNum);
+            let formattedNum = String(lastNum).padStart(2, '0');
+            
+            currentSessionId = (pCode || "PRC") + "-" + formattedNum;
+            
+            let startDate = new Date();
+            sessionStartTimeMs = startDate.getTime();
+            sessionStartTimeStr = formatTimeObj(startDate);
+
+            sessionStorage.setItem("prc_session_id", currentSessionId);
+            sessionStorage.setItem("prc_start_time_str", sessionStartTimeStr);
+            sessionStorage.setItem("prc_start_time_ms", sessionStartTimeMs);
+        } else {
+            currentSessionId = existingSession;
+            sessionStartTimeStr = existingStartStr;
+            sessionStartTimeMs = parseInt(existingStartMs, 10);
+        }
+    }
+
+    // -------------------------------------------------------------
+    // SVG UTILITIES UNTUK GAMBAR DENAH & FIGURAL
+    // -------------------------------------------------------------
+    const SVG_KOMPAS = `
+        <g transform="translate(480, 50)">
+            <circle cx="0" cy="0" r="28" fill="#ffffff" stroke="#0b2340" stroke-width="2"/>
+            <path d="M 0,-24 L 6,0 L 0,-6 L -6,0 Z" fill="#c0392b"/>
+            <path d="M 0,24 L 6,0 L 0,6 L -6,0 Z" fill="#0b2340"/>
+            <text x="0" y="-28" text-anchor="middle" font-size="11" font-weight="bold" fill="#0b2340">U</text>
+            <text x="0" y="36" text-anchor="middle" font-size="11" font-weight="bold" fill="#0b2340">S</text>
+            <text x="33" y="4" text-anchor="middle" font-size="11" font-weight="bold" fill="#0b2340">T</text>
+            <text x="-33" y="4" text-anchor="middle" font-size="11" font-weight="bold" fill="#0b2340">B</text>
+        </g>
+    `;
+
+    function getDenahSVG(highlightA, highlightB) {
+        return `<svg viewBox="0 0 550 350" width="100%" height="260" xmlns="http://www.w3.org/2000/svg">
+            <rect width="550" height="350" fill="#f8fafc" rx="8"/>
+            
+            <!-- Jalan Utama -->
+            <rect x="40" y="150" width="470" height="40" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="2"/>
+            <rect x="150" y="40" width="40" height="270" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="2"/>
+            <rect x="360" y="40" width="40" height="270" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="2"/>
+            
+            <!-- Nama Jalan -->
+            <text x="275" y="174" text-anchor="middle" font-size="11" font-weight="bold" fill="#64748b">JL. SUDIRMAN</text>
+            <text x="170" y="290" text-anchor="middle" font-size="10" font-weight="bold" fill="#64748b" transform="rotate(-90 170 290)">JL. A. YANI</text>
+            <text x="380" y="290" text-anchor="middle" font-size="10" font-weight="bold" fill="#64748b" transform="rotate(-90 380 290)">JL. GATOT SUBROTO</text>
+            
+            <!-- Landmark / Gedung -->
+            <!-- Baris Atas -->
+            <rect x="50" y="60" width="80" height="60" fill="${highlightA==='Stadion'?'#d4a017':highlightB==='Stadion'?'#e74c3c':'#ffffff'}" stroke="#0b2340" stroke-width="2" rx="4"/>
+            <text x="90" y="95" text-anchor="middle" font-size="11" font-weight="bold" fill="#0b2340">Stadion Bima</text>
+
+            <rect x="210" y="60" width="130" height="60" fill="${highlightA==='Hotel'?'#d4a017':highlightB==='Hotel'?'#e74c3c':'#ffffff'}" stroke="#0b2340" stroke-width="2" rx="4"/>
+            <text x="275" y="95" text-anchor="middle" font-size="11" font-weight="bold" fill="#0b2340">Hotel Nusantara</text>
+
+            <rect x="420" y="60" width="80" height="60" fill="${highlightA==='Bandara'?'#d4a017':highlightB==='Bandara'?'#e74c3c':'#ffffff'}" stroke="#0b2340" stroke-width="2" rx="4"/>
+            <text x="460" y="95" text-anchor="middle" font-size="11" font-weight="bold" fill="#0b2340">Bandara</text>
+
+            <!-- Baris Bawah -->
+            <rect x="50" y="220" width="80" height="60" fill="${highlightA==='Terminal'?'#d4a017':highlightB==='Terminal'?'#e74c3c':'#ffffff'}" stroke="#0b2340" stroke-width="2" rx="4"/>
+            <text x="90" y="255" text-anchor="middle" font-size="11" font-weight="bold" fill="#0b2340">Terminal Kota</text>
+
+            <rect x="210" y="220" width="130" height="60" fill="${highlightA==='Polres'?'#d4a017':highlightB==='Polres'?'#e74c3c':'#ffffff'}" stroke="#0b2340" stroke-width="2" rx="4"/>
+            <text x="275" y="255" text-anchor="middle" font-size="11" font-weight="bold" fill="#0b2340">Mapolres</text>
+
+            <rect x="420" y="220" width="80" height="60" fill="${highlightA==='RumahSakit'?'#d4a017':highlightB==='RumahSakit'?'#e74c3c':'#ffffff'}" stroke="#0b2340" stroke-width="2" rx="4"/>
+            <text x="460" y="255" text-anchor="middle" font-size="11" font-weight="bold" fill="#0b2340">Rumah Sakit</text>
+
+            ${SVG_KOMPAS}
+        </svg>`;
+    }
+
+    function makeFigSvg(content, size=70) {
+        return `<svg width="${size}" height="${size}" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;">
+            <rect width="100" height="100" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" rx="6"/>
+            ${content}
+        </svg>`;
+    }
+
+    // -------------------------------------------------------------
+    // BANK SOAL KECERDASAN (50 SOAL VISUAL & HOTS ORIGINAL FOR PRC)
+    // -------------------------------------------------------------
+    const rawKecerdasan = [
+        // A. LOGIKA DENAH DAN ARAH (10 SOAL)
+        {
+            q: "Dimas berada di Stadion Bima dan akan menuju Hotel Nusantara. Jika dilihat dari posisi kedua objek pada denah dengan kompas sebagai acuan, Hotel Nusantara berada di arah ....",
+            media: getDenahSVG("Stadion", "Hotel"),
+            opts: ["Timur Laut", "Timur", "Barat Laut", "Tenggara", "Utara"],
+            ans: 0,
+            exp: "Stadion Bima berada di sebelah kiri-atas (Barat Laut dari pusat), sedangkan Hotel Nusantara berada di posisi tengah-atas. Dari Stadion Bima menuju Hotel Nusantara bergerak ke kanan dan sejajar/agak ke atas, yaitu arah Timur Laut."
+        },
+        {
+            q: "Seorang personel patroli bergerak dari Mapolres menuju Bandara. Menurut denah lokasi, posisi Bandara relatif terhadap Mapolres terletak di arah ....",
+            media: getDenahSVG("Polres", "Bandara"),
+            opts: ["Timur Laut", "Barat Laut", "Tenggara", "Barat Daya", "Utara"],
+            ans: 0,
+            exp: "Mapolres berada di posisi tengah-bawah, sedangkan Bandara berada di kanan-atas. Arah pergerakan dari tengah-bawah ke kanan-atas adalah Timur Laut."
+        },
+        {
+            q: "Posisi Terminal Kota relatif terhadap posisi Hotel Nusantara berada pada arah ....",
+            media: getDenahSVG("Hotel", "Terminal"),
+            opts: ["Barat Daya", "Barat Laut", "Tenggara", "Selatan", "Timur Laut"],
+            ans: 0,
+            exp: "Hotel Nusantara di posisi tengah-atas, Terminal Kota di posisi kiri-bawah. Arah dari tengah-atas menuju kiri-bawah adalah Barat Daya."
+        },
+        {
+            q: "Jika ambulans berangkat dari Rumah Sakit menuju Stadion Bima mengikuti jalur jalan utama, arah umum perjalanan kendaraan tersebut adalah menuju ke arah ....",
+            media: getDenahSVG("RumahSakit", "Stadion"),
+            opts: ["Barat Laut", "Barat Daya", "Timur Laut", "Utara", "Tenggara"],
+            ans: 0,
+            exp: "Rumah Sakit berada di posisi kanan-bawah, sedangkan Stadion Bima di posisi kiri-atas. Arah perjalanan dari kanan-bawah ke kiri-atas adalah Barat Laut."
+        },
+        {
+            q: "Bangunan yang terletak paling utara-barat (Barat Laut) pada denah kawasan adalah ....",
+            media: getDenahSVG("Stadion", null),
+            opts: ["Stadion Bima", "Hotel Nusantara", "Bandara", "Terminal Kota", "Mapolres"],
+            ans: 0,
+            exp: "Pada denah, lokasi di sudut kiri atas (Utara-Barat) adalah Stadion Bima."
+        },
+        {
+            q: "Dari Mapolres, tempat yang berada tepat di sebelah timur (searah jalur Jl. Sudirman ke kanan) adalah ....",
+            media: getDenahSVG("Polres", "RumahSakit"),
+            opts: ["Rumah Sakit", "Terminal Kota", "Hotel Nusantara", "Bandara", "Stadion Bima"],
+            ans: 0,
+            exp: "Di sebelah timur (kanan) dari posisi Mapolres di sepanjang jalur bawah/selatan adalah Rumah Sakit."
+        },
+        {
+            q: "Jika Anda berada di Bandara dan melihat ke arah Rumah Sakit, maka posisi Rumah Sakit berada di sebelah .... dari Bandara.",
+            media: getDenahSVG("Bandara", "RumahSakit"),
+            opts: ["Selatan", "Utara", "Barat", "Timur", "Barat Daya"],
+            ans: 0,
+            exp: "Bandara berada di sudut kanan atas (Utara) dan Rumah Sakit tepat berada di bawahnya pada sudut kanan bawah (Selatan)."
+        },
+        {
+            q: "Seorang tamu keluar dari Hotel Nusantara menuju Terminal Kota. Rute tercepat melewatin persimpangan jalan menuju ke arah ....",
+            media: getDenahSVG("Hotel", "Terminal"),
+            opts: ["Barat Daya", "Tenggara", "Timur Laut", "Utara", "Barat Laut"],
+            ans: 0,
+            exp: "Hotel Nusantara berada di bagian tengah-atas dan Terminal Kota di kiri-bawah, sehingga arah gerak relatifnya adalah Barat Daya."
+        },
+        {
+            q: "Lokasi yang berada di sebelah barat dari Mapolres adalah ....",
+            media: getDenahSVG("Polres", "Terminal"),
+            opts: ["Terminal Kota", "Rumah Sakit", "Bandara", "Hotel Nusantara", "Stadion Bima"],
+            ans: 0,
+            exp: "Terminal Kota terletak sejajar di bagian kiri (Barat) dari Mapolres."
+        },
+        {
+            q: "Posisi Rumah Sakit relatif terhadap Stadion Bima berada pada arah ....",
+            media: getDenahSVG("Stadion", "RumahSakit"),
+            opts: ["Tenggara", "Barat Laut", "Timur Laut", "Barat Daya", "Selatan"],
+            ans: 0,
+            exp: "Stadion Bima di posisi kiri-atas (Barat Laut), sedangkan Rumah Sakit di posisi kanan-bawah (Tenggara). Maka posisi Rumah Sakit relatif terhadap Stadion Bima adalah Tenggara."
+        },
+
+        // B. LOGIKA FIGURAL DAN POLA GAMBAR (20 SOAL)
+        {
+            q: "Pilihlah gambar alternatif (A, B, C, D, atau E) yang tepat untuk melengkapi urutan pola perubahan bentuk geometris berikut!",
+            media: `<div style="display:flex; justify-content:center; align-items:center; gap:10px;">
+                ${makeFigSvg('<circle cx="50" cy="50" r="30" fill="none" stroke="#0b2340" stroke-width="4"/><circle cx="50" cy="50" r="8" fill="#d4a017"/>')}
+                <span style="font-size:20px; font-weight:bold;">→</span>
+                ${makeFigSvg('<rect x="20" y="20" width="60" height="60" fill="none" stroke="#0b2340" stroke-width="4"/><circle cx="50" cy="50" r="8" fill="#d4a017"/>')}
+                <span style="font-size:20px; font-weight:bold;">→</span>
+                ${makeFigSvg('<polygon points="50,15 85,80 15,80" fill="none" stroke="#0b2340" stroke-width="4"/><circle cx="50" cy="50" r="8" fill="#d4a017"/>')}
+                <span style="font-size:20px; font-weight:bold;">→</span>
+                <span style="font-size:30px; font-weight:bold; color:#c0392b;">?</span>
+            </div>`,
+            opts: [
+                makeFigSvg('<polygon points="50,15 85,50 50,85 15,50" fill="none" stroke="#0b2340" stroke-width="4"/><circle cx="50" cy="50" r="8" fill="#d4a017"/>'),
+                makeFigSvg('<polygon points="50,15 85,50 50,85 15,50" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="30" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="20" y="20" width="60" height="60" fill="#d4a017"/>'),
+                makeFigSvg('<line x1="15" y1="50" x2="85" y2="50" stroke="#0b2340" stroke-width="4"/>')
+            ],
+            ans: 0,
+            exp: "Pola bentuk luar berubah dari Lingkaran -> Persegi (4 sisi) -> Segitiga (3 sisi) -> Belah Ketupat / Segiempat Rotasi (4 sisi) sementara titik lingkaran di tengah tetap konsisten."
+        },
+        {
+            q: "Manakah gambar yang merupakan hasil rotasi 90 derajat searah jarum jam dari objek acuan berikut?",
+            media: `<div style="display:flex; justify-content:center; align-items:center;">
+                ${makeFigSvg('<line x1="50" y1="80" x2="50" y2="20" stroke="#0b2340" stroke-width="6"/><polygon points="50,10 35,30 65,30" fill="#c0392b"/><circle cx="75" cy="50" r="10" fill="#d4a017"/>', 90)}
+            </div>`,
+            opts: [
+                makeFigSvg('<line x1="20" y1="50" x2="80" y2="50" stroke="#0b2340" stroke-width="6"/><polygon points="90,50 70,35 70,65" fill="#c0392b"/><circle cx="50" cy="75" r="10" fill="#d4a017"/>'),
+                makeFigSvg('<line x1="20" y1="50" x2="80" y2="50" stroke="#0b2340" stroke-width="6"/><polygon points="10,50 30,35 30,65" fill="#c0392b"/><circle cx="50" cy="25" r="10" fill="#d4a017"/>'),
+                makeFigSvg('<line x1="50" y1="20" x2="50" y2="80" stroke="#0b2340" stroke-width="6"/><polygon points="50,90 35,70 65,70" fill="#c0392b"/><circle cx="25" cy="50" r="10" fill="#d4a017"/>'),
+                makeFigSvg('<line x1="20" y1="50" x2="80" y2="50" stroke="#0b2340" stroke-width="6"/><polygon points="90,50 70,35 70,65" fill="#c0392b"/><circle cx="50" cy="25" r="10" fill="#d4a017"/>'),
+                makeFigSvg('<line x1="50" y1="80" x2="50" y2="20" stroke="#0b2340" stroke-width="6"/><polygon points="50,10 35,30 65,30" fill="#c0392b"/><circle cx="25" cy="50" r="10" fill="#d4a017"/>')
+            ],
+            ans: 0,
+            exp: "Panah menghadap ke atas dengan titik di sebelah kanan, jika diputar 90° searah jarum jam maka panah mengarah ke kanan dan titik berada di sebelah bawah."
+        },
+        {
+            q: "Tentukan gambar berikut yang memiliki hubungan logika analogi yang setara!",
+            media: `<div style="display:flex; justify-content:center; align-items:center; gap:10px;">
+                ${makeFigSvg('<rect x="20" y="20" width="60" height="60" fill="#0b2340"/>')}
+                <span style="font-size:20px; font-weight:bold;">:</span>
+                ${makeFigSvg('<rect x="20" y="20" width="60" height="60" fill="none" stroke="#0b2340" stroke-width="4"/>')}
+                <span style="font-size:20px; font-weight:bold;">=</span>
+                ${makeFigSvg('<circle cx="50" cy="50" r="30" fill="#c0392b"/>')}
+                <span style="font-size:20px; font-weight:bold;">:</span>
+                <span style="font-size:30px; font-weight:bold; color:#c0392b;">?</span>
+            </div>`,
+            opts: [
+                makeFigSvg('<circle cx="50" cy="50" r="30" fill="none" stroke="#c0392b" stroke-width="4"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="30" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="20" y="20" width="60" height="60" fill="#c0392b"/>'),
+                makeFigSvg('<polygon points="50,15 85,80 15,80" fill="none" stroke="#c0392b" stroke-width="4"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="15" fill="#c0392b"/>')
+            ],
+            ans: 0,
+            exp: "Persegi hitam penuh menjadi persegi garis luar kosong. Maka Lingkaran merah penuh menjadi Lingkaran merah garis luar kosong."
+        },
+        {
+            q: "Pilihlah gambar yang berbeda kelompoknya (paling tidak serasi) dari kelima pilihan gambar berikut!",
+            media: `<div style="font-size:13px; font-weight:bold; color:#64748b; margin-bottom:5px;">Amati bentuk simetri dan jumlah garis diagonal pada setiap gambar:</div>`,
+            opts: [
+                makeFigSvg('<line x1="10" y1="10" x2="90" y2="90" stroke="#0b2340" stroke-width="4"/><line x1="90" y1="10" x2="10" y2="90" stroke="#0b2340" stroke-width="4"/><line x1="50" y1="10" x2="50" y2="90" stroke="#0b2340" stroke-width="4"/>'),
+                makeFigSvg('<line x1="10" y1="10" x2="90" y2="90" stroke="#0b2340" stroke-width="4"/><line x1="90" y1="10" x2="10" y2="90" stroke="#0b2340" stroke-width="4"/>'),
+                makeFigSvg('<line x1="50" y1="10" x2="50" y2="90" stroke="#0b2340" stroke-width="4"/><line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="4"/>'),
+                makeFigSvg('<line x1="20" y1="20" x2="80" y2="80" stroke="#0b2340" stroke-width="4"/><line x1="80" y1="20" x2="20" y2="80" stroke="#0b2340" stroke-width="4"/>'),
+                makeFigSvg('<line x1="15" y1="85" x2="85" y2="15" stroke="#0b2340" stroke-width="4"/><line x1="15" y1="15" x2="85" y2="85" stroke="#0b2340" stroke-width="4"/>')
+            ],
+            ans: 0,
+            exp: "Gambar A memiliki 3 garis bersilangan (6 simetri/lengan), sedangkan pilihan B, C, D, dan E seluruhnya terdiri dari tepat 2 garis bersilangan (4 lengan)."
+        },
+        {
+            q: "Tentukan urutan gambar berikutnya berdasarkan penambahan jumlah elemen titik secara konsisten!",
+            media: `<div style="display:flex; justify-content:center; align-items:center; gap:10px;">
+                ${makeFigSvg('<circle cx="50" cy="50" r="8" fill="#0b2340"/>')}
+                <span style="font-size:20px; font-weight:bold;">→</span>
+                ${makeFigSvg('<circle cx="35" cy="50" r="8" fill="#0b2340"/><circle cx="65" cy="50" r="8" fill="#0b2340"/>')}
+                <span style="font-size:20px; font-weight:bold;">→</span>
+                ${makeFigSvg('<circle cx="50" cy="30" r="8" fill="#0b2340"/><circle cx="30" cy="65" r="8" fill="#0b2340"/><circle cx="70" cy="65" r="8" fill="#0b2340"/>')}
+                <span style="font-size:20px; font-weight:bold;">→</span>
+                <span style="font-size:30px; font-weight:bold; color:#c0392b;">?</span>
+            </div>`,
+            opts: [
+                makeFigSvg('<circle cx="30" cy="30" r="8" fill="#0b2340"/><circle cx="70" cy="30" r="8" fill="#0b2340"/><circle cx="30" cy="70" r="8" fill="#0b2340"/><circle cx="70" cy="70" r="8" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="8" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="20" r="8" fill="#0b2340"/><circle cx="50" cy="50" r="8" fill="#0b2340"/><circle cx="50" cy="80" r="8" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="20" y="20" width="60" height="60" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="30" fill="none" stroke="#0b2340" stroke-width="4"/>')
+            ],
+            ans: 0,
+            exp: "Pola bertambah jumlah titik dari 1 -> 2 -> 3 -> 4 titik yang membentuk pola simetris empat sudut (Persegi)."
+        },
+        {
+            q: "Manakah gambar yang merupakan hasil cermin horizontal (pencerminan kiri-kanan) dari pola berikut?",
+            media: `<div style="display:flex; justify-content:center; align-items:center;">
+                ${makeFigSvg('<path d="M 20 80 L 20 20 L 70 50 Z" fill="#d4a017" stroke="#0b2340" stroke-width="3"/><circle cx="30" cy="35" r="5" fill="#0b2340"/>', 90)}
+            </div>`,
+            opts: [
+                makeFigSvg('<path d="M 80 80 L 80 20 L 30 50 Z" fill="#d4a017" stroke="#0b2340" stroke-width="3"/><circle cx="70" cy="35" r="5" fill="#0b2340"/>'),
+                makeFigSvg('<path d="M 20 80 L 20 20 L 70 50 Z" fill="#d4a017" stroke="#0b2340" stroke-width="3"/><circle cx="30" cy="35" r="5" fill="#0b2340"/>'),
+                makeFigSvg('<path d="M 20 20 L 80 20 L 50 70 Z" fill="#d4a017" stroke="#0b2340" stroke-width="3"/><circle cx="35" cy="30" r="5" fill="#0b2340"/>'),
+                makeFigSvg('<path d="M 80 80 L 80 20 L 30 50 Z" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="30" fill="#d4a017"/>')
+            ],
+            ans: 0,
+            exp: "Segitiga mengarah ke kanan dengan titik di sebelah kiri. Jika dicerminkan horizontal, alas segitiga berpindah ke kanan, puncak ke kiri, dan titik berada di kanan."
+        },
+        {
+            q: "Pilihlah gambar yang melanjutkan pola pengurangan jumlah garis sisi luar!",
+            media: `<div style="display:flex; justify-content:center; align-items:center; gap:10px;">
+                ${makeFigSvg('<polygon points="50,10 85,35 70,85 30,85 15,35" fill="none" stroke="#0b2340" stroke-width="4"/>')}
+                <span style="font-size:20px; font-weight:bold;">→</span>
+                ${makeFigSvg('<rect x="20" y="20" width="60" height="60" fill="none" stroke="#0b2340" stroke-width="4"/>')}
+                <span style="font-size:20px; font-weight:bold;">→</span>
+                ${makeFigSvg('<polygon points="50,15 85,80 15,80" fill="none" stroke="#0b2340" stroke-width="4"/>')}
+                <span style="font-size:20px; font-weight:bold;">→</span>
+                <span style="font-size:30px; font-weight:bold; color:#c0392b;">?</span>
+            </div>`,
+            opts: [
+                makeFigSvg('<circle cx="50" cy="50" r="30" fill="none" stroke="#0b2340" stroke-width="4"/>'),
+                makeFigSvg('<line x1="20" y1="20" x2="80" y2="80" stroke="#0b2340" stroke-width="4"/>'),
+                makeFigSvg('<rect x="20" y="20" width="60" height="60" fill="#0b2340"/>'),
+                makeFigSvg('<polygon points="50,10 85,35 70,85 30,85 15,35" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="10" fill="#0b2340"/>')
+            ],
+            ans: 0,
+            exp: "Jumlah sisi berkurang: Segilima (5 sisi) -> Segiempat (4) -> Segitiga (3) -> Lingkaran (1 sisi lengkung kontinu / kurva tertutup)."
+        },
+        {
+            q: "Tentukan gambar lanjutan berdasarkan pola rotasi panah 45 derajat searah jarum jam!",
+            media: `<div style="display:flex; justify-content:center; align-items:center; gap:10px;">
+                ${makeFigSvg('<line x1="50" y1="80" x2="50" y2="20" stroke="#0b2340" stroke-width="4"/><polygon points="50,10 40,25 60,25" fill="#0b2340"/>')}
+                <span style="font-size:20px; font-weight:bold;">→</span>
+                ${makeFigSvg('<line x1="25" y1="75" x2="75" y2="25" stroke="#0b2340" stroke-width="4"/><polygon points="82,18 68,22 78,32" fill="#0b2340"/>')}
+                <span style="font-size:20px; font-weight:bold;">→</span>
+                ${makeFigSvg('<line x1="20" y1="50" x2="80" y2="50" stroke="#0b2340" stroke-width="4"/><polygon points="90,50 75,40 75,60" fill="#0b2340"/>')}
+                <span style="font-size:20px; font-weight:bold;">→</span>
+                <span style="font-size:30px; font-weight:bold; color:#c0392b;">?</span>
+            </div>`,
+            opts: [
+                makeFigSvg('<line x1="25" y1="25" x2="75" y2="75" stroke="#0b2340" stroke-width="4"/><polygon points="82,82 78,68 68,78" fill="#0b2340"/>'),
+                makeFigSvg('<line x1="50" y1="20" x2="50" y2="80" stroke="#0b2340" stroke-width="4"/><polygon points="50,90 40,75 60,75" fill="#0b2340"/>'),
+                makeFigSvg('<line x1="80" y1="50" x2="20" y2="50" stroke="#0b2340" stroke-width="4"/><polygon points="10,50 25,40 25,60" fill="#0b2340"/>'),
+                makeFigSvg('<line x1="50" y1="80" x2="50" y2="20" stroke="#0b2340" stroke-width="4"/><polygon points="50,10 40,25 60,25" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="20" fill="#0b2340"/>')
+            ],
+            ans: 0,
+            exp: "Rotasi 45° searah jarum jam: Atas (0°) -> Tenggara-Utara (45°) -> Kanan (90°) -> Tenggara / Kanan Bawah (135°)."
+        },
+        {
+            q: "Manakah pasangan gambar yang memiliki hubungan transformasi perubahan isi warna (arsiran penuh menjadi kosong)?",
+            media: `<div style="display:flex; justify-content:center; align-items:center; gap:10px;">
+                ${makeFigSvg('<polygon points="50,15 85,80 15,80" fill="#0b2340"/>')}
+                <span style="font-size:20px; font-weight:bold;">:</span>
+                ${makeFigSvg('<polygon points="50,15 85,80 15,80" fill="none" stroke="#0b2340" stroke-width="4"/>')}
+            </div>`,
+            opts: [
+                makeFigSvg('<rect x="20" y="20" width="60" height="60" fill="#d4a017"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="30" fill="none" stroke="#0b2340" stroke-width="4"/>'),
+                makeFigSvg('<line x1="10" y1="10" x2="90" y2="90" stroke="#0b2340" stroke-width="4"/>'),
+                makeFigSvg('<polygon points="50,10 85,35 70,85 30,85 15,35" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="10" fill="#0b2340"/>')
+            ],
+            ans: 0,
+            exp: "Pasangan gambar analogi merujuk pada perubahan warna padat penuh menjadi bentuk bergaris luar saja."
+        },
+        {
+            q: "Pilihlah bentuk yang melengkapi bagian kosong pada kombinasi matriks gambar geometris berikut!",
+            media: `<div style="display:flex; justify-content:center; align-items:center; gap:10px;">
+                ${makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="3"/><circle cx="50" cy="50" r="12" fill="#c0392b"/>')}
+                <span style="font-size:20px; font-weight:bold;">+</span>
+                ${makeFigSvg('<line x1="10" y1="10" x2="90" y2="90" stroke="#0b2340" stroke-width="3"/>')}
+                <span style="font-size:20px; font-weight:bold;">=</span>
+                <span style="font-size:30px; font-weight:bold; color:#c0392b;">?</span>
+            </div>`,
+            opts: [
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="3"/><circle cx="50" cy="50" r="12" fill="#c0392b"/><line x1="10" y1="10" x2="90" y2="90" stroke="#0b2340" stroke-width="3"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="12" fill="#c0392b"/>'),
+                makeFigSvg('<line x1="10" y1="10" x2="90" y2="90" stroke="#0b2340" stroke-width="3"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="35" fill="none" stroke="#0b2340" stroke-width="3"/>')
+            ],
+            ans: 0,
+            exp: "Penggabungan (penggabungan layer) bentuk persegi bertitik merah di tengah dengan garis diagonal silang menghasilkan kombinasi kedua objek secara utuh."
+        },
+        {
+            q: "Gambar manakah yang merupakan hasil perbesaran dan pembagian dua objek yang identik?",
+            media: `<div style="display:flex; justify-content:center; align-items:center;">
+                ${makeFigSvg('<circle cx="35" cy="50" r="15" fill="#0b2340"/><circle cx="65" cy="50" r="15" fill="#0b2340"/>', 90)}
+            </div>`,
+            opts: [
+                makeFigSvg('<circle cx="35" cy="50" r="15" fill="#0b2340"/><circle cx="65" cy="50" r="15" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="20" y="20" width="60" height="60" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="30" fill="#0b2340"/>'),
+                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="4"/>'),
+                makeFigSvg('<polygon points="50,15 85,80 15,80" fill="#0b2340"/>')
+            ],
+            ans: 0,
+            exp: "Dua lingkaran sejajar hitam padat identik dengan bentuk pilihan A."
+        },
+        {
+            q: "Pilihlah bentuk figural yang tidak memiliki simetri lipat dari pilihan berikut!",
+            media: `<div style="font-size:13px; font-weight:bold; color:#64748b; margin-bottom:5px;">Amati simetri lipat elemen geometris:</div>`,
+            opts: [
+                makeFigSvg('<path d="M 20 20 L 70 20 L 90 80 L 40 80 Z" fill="none" stroke="#0b2340" stroke-width="4"/>'),
+                makeFigSvg('<rect x="20" y="20" width="60" height="60" fill="none" stroke="#0b2340" stroke-width="4"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="30" fill="none" stroke="#0b2340" stroke-width="4"/>'),
+                makeFigSvg('<polygon points="50,15 85,80 15,80" fill="none" stroke="#0b2340" stroke-width="4"/>'),
+                makeFigSvg('<polygon points="50,15 85,50 50,85 15,50" fill="none" stroke="#0b2340" stroke-width="4"/>')
+            ],
+            ans: 0,
+            exp: "Gambar A adalah Jajaran Genjang miring yang tidak memiliki simetri lipat, sedangkan persegi, lingkaran, segitiga sama kaki, dan belah ketupat memilikinya."
+        },
+        {
+            q: "Tentukan gambar berikutnya pada deret transformasi ukuran objek (Besar -> Sedang -> Kecil)!",
+            media: `<div style="display:flex; justify-content:center; align-items:center; gap:10px;">
+                ${makeFigSvg('<rect x="10" y="10" width="80" height="80" fill="#0b2340"/>')}
+                <span style="font-size:20px; font-weight:bold;">→</span>
+                ${makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>')}
+                <span style="font-size:20px; font-weight:bold;">→</span>
+                ${makeFigSvg('<rect x="40" y="40" width="20" height="20" fill="#0b2340"/>')}
+                <span style="font-size:20px; font-weight:bold;">→</span>
+                <span style="font-size:30px; font-weight:bold; color:#c0392b;">?</span>
+            </div>`,
+            opts: [
+                makeFigSvg('<circle cx="50" cy="50" r="4" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="10" y="10" width="80" height="80" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="35" fill="#0b2340"/>'),
+                makeFigSvg('<polygon points="50,15 85,80 15,80" fill="#0b2340"/>'),
+                makeFigSvg('<line x1="10" y1="10" x2="90" y2="90" stroke="#0b2340" stroke-width="4"/>')
+            ],
+            ans: 0,
+            exp: "Ukuran objek persegi menyusut secara konsisten hingga menjadi titik/lingkaran sangat kecil di pusat."
+        },
+        {
+            q: "Manakah gambar yang konsisten dengan urutan pergerakan posisi objek titik hitam di dalam lingkaran (Pukul 12 -> Pukul 3 -> Pukul 6 -> ...)?",
+            media: `<div style="display:flex; justify-content:center; align-items:center; gap:10px;">
+                ${makeFigSvg('<circle cx="50" cy="50" r="35" fill="none" stroke="#0b2340" stroke-width="3"/><circle cx="50" cy="20" r="6" fill="#0b2340"/>')}
+                <span style="font-size:20px; font-weight:bold;">→</span>
+                ${makeFigSvg('<circle cx="50" cy="50" r="35" fill="none" stroke="#0b2340" stroke-width="3"/><circle cx="80" cy="50" r="6" fill="#0b2340"/>')}
+                <span style="font-size:20px; font-weight:bold;">→</span>
+                ${makeFigSvg('<circle cx="50" cy="50" r="35" fill="none" stroke="#0b2340" stroke-width="3"/><circle cx="50" cy="80" r="6" fill="#0b2340"/>')}
+                <span style="font-size:20px; font-weight:bold;">→</span>
+                <span style="font-size:30px; font-weight:bold; color:#c0392b;">?</span>
+            </div>`,
+            opts: [
+                makeFigSvg('<circle cx="50" cy="50" r="35" fill="none" stroke="#0b2340" stroke-width="3"/><circle cx="20" cy="50" r="6" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="35" fill="none" stroke="#0b2340" stroke-width="3"/><circle cx="50" cy="20" r="6" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="35" fill="none" stroke="#0b2340" stroke-width="3"/><circle cx="80" cy="50" r="6" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="35" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="20" y="20" width="60" height="60" fill="#0b2340"/>')
+            ],
+            ans: 0,
+            exp: "Pergerakan titik berputar 90° searah jarum jam: Atas -> Kanan -> Bawah -> Kiri (Pukul 9 / koordinat X=20, Y=50)."
+        },
+        {
+            q: "Pilihlah bentuk gabungan antara dua segitiga yang saling bertolak belakang!",
+            media: `<div style="display:flex; justify-content:center; align-items:center;">
+                ${makeFigSvg('<polygon points="50,10 15,50 85,50" fill="#0b2340"/><polygon points="50,90 15,50 85,50" fill="#d4a017"/>', 90)}
+            </div>`,
+            opts: [
+                makeFigSvg('<polygon points="50,10 15,50 85,50" fill="#0b2340"/><polygon points="50,90 15,50 85,50" fill="#d4a017"/>'),
+                makeFigSvg('<rect x="20" y="20" width="60" height="60" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="35" fill="#0b2340"/>'),
+                makeFigSvg('<line x1="10" y1="10" x2="90" y2="90" stroke="#0b2340" stroke-width="4"/>'),
+                makeFigSvg('<polygon points="50,15 85,80 15,80" fill="#0b2340"/>')
+            ],
+            ans: 0,
+            exp: "Gabungan dua segitiga sama kaki atas-bawah membentuk belah ketupat dua warna (opsi A)."
+        },
+        {
+            q: "Manakah gambar yang menunjukkan hasil rotasi 180 derajat dari bentuk huruf L geometris?",
+            media: `<div style="display:flex; justify-content:center; align-items:center;">
+                ${makeFigSvg('<path d="M 25 25 L 25 75 L 75 75 L 75 60 L 40 60 L 40 25 Z" fill="#0b2340"/>', 90)}
+            </div>`,
+            opts: [
+                makeFigSvg('<path d="M 75 75 L 75 25 L 25 25 L 25 40 L 60 40 L 60 75 Z" fill="#0b2340"/>'),
+                makeFigSvg('<path d="M 25 25 L 25 75 L 75 75 L 75 60 L 40 60 L 40 25 Z" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="20" y="20" width="60" height="60" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="30" fill="#0b2340"/>'),
+                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="4"/>')
+            ],
+            ans: 0,
+            exp: "Rotasi 180° membalikkan seluruh posisi atas->bawah dan kiri->kanan secara sempurna."
+        },
+        {
+            q: "Pilihlah gambar yang merupakan kombinasi dari tiga lingkaran konsentris (lingkaran dalam satu pusat)!",
+            media: `<div style="display:flex; justify-content:center; align-items:center;">
+                ${makeFigSvg('<circle cx="50" cy="50" r="40" fill="none" stroke="#0b2340" stroke-width="3"/><circle cx="50" cy="50" r="25" fill="none" stroke="#0b2340" stroke-width="3"/><circle cx="50" cy="50" r="10" fill="#0b2340"/>', 90)}
+            </div>`,
+            opts: [
+                makeFigSvg('<circle cx="50" cy="50" r="40" fill="none" stroke="#0b2340" stroke-width="3"/><circle cx="50" cy="50" r="25" fill="none" stroke="#0b2340" stroke-width="3"/><circle cx="50" cy="50" r="10" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="20" y="20" width="60" height="60" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="40" fill="#0b2340"/>'),
+                makeFigSvg('<polygon points="50,15 85,80 15,80" fill="#0b2340"/>'),
+                makeFigSvg('<line x1="10" y1="10" x2="90" y2="90" stroke="#0b2340" stroke-width="4"/>')
+            ],
+            ans: 0,
+            exp: "Tiga lingkaran konsentris dengan titik padat di bagian pusat sesuai dengan pilihan A."
+        },
+        {
+            q: "Tentukan gambar yang melengkapi pola barisan bentuk berulir (Garis -> Segitiga -> Persegi -> Segilima)!",
+            media: `<div style="display:flex; justify-content:center; align-items:center; gap:8px;">
+                ${makeFigSvg('<line x1="20" y1="50" x2="80" y2="50" stroke="#0b2340" stroke-width="4"/>')}
+                <span style="font-size:16px; font-weight:bold;">→</span>
+                ${makeFigSvg('<polygon points="50,20 80,75 20,75" fill="none" stroke="#0b2340" stroke-width="4"/>')}
+                <span style="font-size:16px; font-weight:bold;">→</span>
+                ${makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="4"/>')}
+                <span style="font-size:16px; font-weight:bold;">→</span>
+                <span style="font-size:24px; font-weight:bold; color:#c0392b;">?</span>
+            </div>`,
+            opts: [
+                makeFigSvg('<polygon points="50,15 85,38 70,80 30,80 15,38" fill="none" stroke="#0b2340" stroke-width="4"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="30" fill="none" stroke="#0b2340" stroke-width="4"/>'),
+                makeFigSvg('<rect x="20" y="20" width="60" height="60" fill="#0b2340"/>'),
+                makeFigSvg('<line x1="10" y1="10" x2="90" y2="90" stroke="#0b2340" stroke-width="4"/>'),
+                makeFigSvg('<polygon points="50,20 80,75 20,75" fill="#0b2340"/>')
+            ],
+            ans: 0,
+            exp: "Pola bertambahnya sudut/sisi: Garis (2 titik ujung) -> Segitiga (3) -> Persegi (4) -> Segilima (5 sisi/sudut)."
+        },
+        {
+            q: "Manakah gambar yang menunjukkan posisi garis silang diagonal penuh di dalam lingkaran?",
+            media: `<div style="display:flex; justify-content:center; align-items:center;">
+                ${makeFigSvg('<circle cx="50" cy="50" r="35" fill="none" stroke="#0b2340" stroke-width="3"/><line x1="25" y1="25" x2="75" y2="75" stroke="#0b2340" stroke-width="3"/><line x1="75" y1="25" x2="25" y2="75" stroke="#0b2340" stroke-width="3"/>', 90)}
+            </div>`,
+            opts: [
+                makeFigSvg('<circle cx="50" cy="50" r="35" fill="none" stroke="#0b2340" stroke-width="3"/><line x1="25" y1="25" x2="75" y2="75" stroke="#0b2340" stroke-width="3"/><line x1="75" y1="25" x2="25" y2="75" stroke="#0b2340" stroke-width="3"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="35" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="20" y="20" width="60" height="60" fill="#0b2340"/>'),
+                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="4"/>'),
+                makeFigSvg('<polygon points="50,15 85,80 15,80" fill="#0b2340"/>')
+            ],
+            ans: 0,
+            exp: "Gambar lingkaran bersilang diagonal penuh berada pada pilihan A."
+        },
+        {
+            q: "Pilihlah bentuk yang melengkapi deret perubahan warna berselang-seling (Hitam -> Putih -> Hitam -> Putih)!",
+            media: `<div style="display:flex; justify-content:center; align-items:center; gap:8px;">
+                ${makeFigSvg('<circle cx="50" cy="50" r="30" fill="#0b2340"/>')}
+                <span style="font-size:16px; font-weight:bold;">→</span>
+                ${makeFigSvg('<circle cx="50" cy="50" r="30" fill="none" stroke="#0b2340" stroke-width="4"/>')}
+                <span style="font-size:16px; font-weight:bold;">→</span>
+                ${makeFigSvg('<circle cx="50" cy="50" r="30" fill="#0b2340"/>')}
+                <span style="font-size:16px; font-weight:bold;">→</span>
+                <span style="font-size:24px; font-weight:bold; color:#c0392b;">?</span>
+            </div>`,
+            opts: [
+                makeFigSvg('<circle cx="50" cy="50" r="30" fill="none" stroke="#0b2340" stroke-width="4"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="30" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="20" y="20" width="60" height="60" fill="#0b2340"/>'),
+                makeFigSvg('<polygon points="50,15 85,80 15,80" fill="none" stroke="#0b2340" stroke-width="4"/>'),
+                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="4"/>')
+            ],
+            ans: 0,
+            exp: "Pola warna berselang-seling penuh -> kosong -> penuh -> kosong (Lingkaran garis luar kosong)."
+        },
+
+        // C. PENALARAN NUMERIK DAN LOGIS (10 SOAL)
+        {
+            q: "Suku berikutnya dari deret bilangan: 3, 6, 11, 18, 27, .... adalah",
+            opts: ["38", "36", "40", "35", "42"],
+            ans: 0,
+            exp: "Pola selisih bertambah bilangan ganjil: +3, +5, +7, +9, berikutnya +11. Sehinga 27 + 11 = 38."
+        },
+        {
+            q: "Suku berikutnya dari deret angka: 2, 4, 8, 16, 32, .... adalah",
+            opts: ["64", "48", "50", "60", "128"],
+            ans: 0,
+            exp: "Pola dikali 2 secara berurutan: 32 x 2 = 64."
+        },
+        {
+            q: "Suku berikutnya dari deret bilangan kuadrat: 1, 4, 9, 16, 25, .... adalah",
+            opts: ["36", "49", "30", "40", "32"],
+            ans: 0,
+            exp: "Urutan bilangan kuadrat (1², 2², 3², 4², 5²). Suku berikutnya 6² = 36."
+        },
+        {
+            q: "Suku berikutnya dari deret bertingkat: 100, 95, 85, 70, 50, .... adalah",
+            opts: ["25", "30", "20", "35", "15"],
+            ans: 0,
+            exp: "Pola pengurangan bertingkat: -5, -10, -15, -20, berikutnya -25. Sehingga 50 - 25 = 25."
+        },
+        {
+            q: "Deret Fibonacci: 2, 3, 5, 8, 13, 21, .... Suku berikutnya adalah",
+            opts: ["34", "30", "32", "35", "28"],
+            ans: 0,
+            exp: "Setiap suku adalah hasil penjumlahan dua suku sebelumnya: 13 + 21 = 34."
+        },
+        {
+            q: "Sebuah mobil patroli menempuh jarak 180 km dengan kecepatan rata-rata 60 km/jam. Berapa lama waktu yang dibutuhkan?",
+            opts: ["3 jam", "2.5 jam", "4 jam", "3.5 jam", "2 jam"],
+            ans: 0,
+            exp: "Waktu = Jarak / Kecepatan = 180 / 60 = 3 jam."
+        },
+        {
+            q: "Lima orang pekerja dapat menyelesaikan pengecatan pos dalam waktu 6 hari. Jika dikerjakan oleh 10 orang, berapa hari yang dibutuhkan?",
+            opts: ["3 hari", "4 hari", "2 hari", "5 hari", "2.5 hari"],
+            ans: 0,
+            exp: "Perbandingan berbalik nilai: (5 x 6) / 10 = 30 / 10 = 3 hari."
+        },
+        {
+            q: "Harga sebuah perlengkapan setelah mendapat diskon 20% adalah Rp 800.000. Berapakah harga awal sebelum diskon?",
+            opts: ["Rp 1.000.000", "Rp 960.000", "Rp 1.100.000", "Rp 900.000", "Rp 1.200.000"],
+            ans: 0,
+            exp: "Harga Awal = 800.000 / (1 - 0.20) = 800.000 / 0.8 = Rp 1.000.000."
+        },
+        {
+            q: "Rasio jumlah personel Pria dan Wanita adalah 7 : 3. Jika total personel 50 orang, berapa jumlah personel Wanita?",
+            opts: ["15 orang", "35 orang", "20 orang", "25 orang", "10 orang"],
+            ans: 0,
+            exp: "Wanita = (3 / (7+3)) x 50 = (3/10) x 50 = 15 orang."
+        },
+        {
+            q: "Jika 3x + 7 = 22, maka nilai dari 2x - 1 adalah ....",
+            opts: ["9", "10", "8", "11", "7"],
+            ans: 0,
+            exp: "3x = 15 -> x = 5. Nilai 2(5) - 1 = 9."
+        },
+
+        // D. ANALOGI DAN HUBUNGAN LOGIS (10 SOAL)
+        {
+            q: "PRESISI = ....",
+            opts: ["Ketepatan", "Kecepatan", "Keagungan", "Kekuatan", "Kejelasan"],
+            ans: 0,
+            exp: "Presisi bermakna ketepatan atau keakuratan yang sangat tinggi."
+        },
+        {
+            q: "PROGRES >< ....",
+            opts: ["Regres", "Agres", "Kongres", "Transgres", "Ingres"],
+            ans: 0,
+            exp: "Progres (kemajuan) berlawanan kata (antonim) dengan Regres (kemunduran)."
+        },
+        {
+            q: "KAMERA : LENSA = TELESKOP : ....",
+            opts: ["Okuler", "Cermin", "Bintang", "Langit", "Fokus"],
+            ans: 0,
+            exp: "Kamera menggunakan lensa sebagai komponen utama, teleskop menggunakan okuler/lensa objektif."
+        },
+        {
+            q: "POLISI : KETERTIBAN = HAKIM : ....",
+            opts: ["Keadilan", "Hukum", "Vonis", "Sidang", "Pengacara"],
+            ans: 0,
+            exp: "Polisi bertugas menegakkan ketertiban, sedangkan Hakim bertugas menegakkan keadilan."
+        },
+        {
+            q: "Semua anggota wajib menjaga kedisiplinan. Sebagian anggota bertugas di bagian lalu lintas. Kesimpulan yang tepat adalah ....",
+            opts: ["Sebagian anggota lalu lintas wajib menjaga kedisiplinan", "Semua anggota lalu lintas tidak disiplin", "Sebagian anggota yang disiplin bukan polisi", "Tidak ada anggota lalu lintas yang disiplin", "Semua yang disiplin pasti anggota lalu lintas"],
+            ans: 0,
+            exp: "Karena seluruh anggota wajib disiplin, maka sebagian anggota di bagian lalu lintas juga wajib menjaga kedisiplinan."
+        },
+        {
+            q: "Jika pengawasan ditingkatkan, maka tingkat kecurangan menurun. Saat ini tingkat kecurangan tidak menurun. Kesimpulan yang tepat:",
+            opts: ["Pengawasan tidak ditingkatkan", "Pengawasan telah ditingkatkan", "Kecurangan tetap terjadi", "Pengawasan tidak berguna", "Tingkat kecurangan naik"],
+            ans: 0,
+            exp: "Modus Tollens: Jika P maka Q. Tidak Q. Maka kesimpulannya Tidak P (Pengawasan tidak ditingkatkan)."
+        },
+        {
+            q: "RADAR : GELOMBANG = SONAR : ....",
+            opts: ["Bunyi", "Cahaya", "Air", "Kapal", "Laut"],
+            ans: 0,
+            exp: "Radar menggunakan gelombang radio/elektromagnetik, sedangkan Sonar menggunakan gelombang bunyi."
+        },
+        {
+            q: "STATIS >< ....",
+            opts: ["Dinamis", "Pasif", "Tetap", "Labil", "Kritis"],
+            ans: 0,
+            exp: "Statis (diam/tidak bergerak) berlawanan makna dengan Dinamis (bergerak aktif)."
+        },
+        {
+            q: "DOKTER : OBAT = GURU : ....",
+            opts: ["Ilmu", "Buku", "Sekolah", "Murid", "Papan"],
+            ans: 0,
+            exp: "Dokter memberikan obat untuk kesembuhan, Guru memberikan ilmu untuk kecerdasan."
+        },
+        {
+            q: "PANCASILA : IDEOLOGI = UUD 1945 : ....",
+            opts: ["Konstitusi", "Hukum", "Peraturan", "Pedoman", "Dasar"],
+            ans: 0,
+            exp: "Pancasila merupakan ideologi negara, sedangkan UUD 1945 merupakan konstitusi negara."
+        }
+    ];
+
+    // -------------------------------------------------------------
+    // CONTROLLER & NAVIGATION ENGINE
+    // -------------------------------------------------------------
+    let currentKecerdasanIdx = 0;
+    let userAnsKecerdasan = {};
+
+    function startFullSimulation() {
+        let namaVal = document.getElementById("inputNama").value.trim();
+        if (!namaVal) {
+            alert("Harap masukkan Nama Lengkap Peserta terlebih dahulu!");
+            return;
+        }
+
+        initSessionOnStart(namaVal, pCode, pPin);
+
+        document.getElementById("sec-start").style.display = "none";
+        
+        // Start Global Timer (60 Menit = 3600 detik)
+        timerLeft = 3600;
+        startGlobalTimer();
+
+        // Load Section Kecerdasan Pertama kali
+        initKecerdasanSection();
+        showSection("kecerdasan");
+    }
+
+    function startGlobalTimer() {
+        if (timerInterval) clearInterval(timerInterval);
+        timerInterval = setInterval(() => {
+            timerLeft--;
+            if (timerLeft <= 0) {
+                clearInterval(timerInterval);
+                alert("Waktu CAT Latihan Telah Habis!");
+                finishAllSimulation();
+            } else {
+                let m = Math.floor(timerLeft / 60);
+                let s = timerLeft % 60;
+                document.getElementById("timer").innerText = 
+                    String(m).padStart(2, '0') + ":" + String(s).padStart(2, '0');
+            }
+        }, 1000);
+    }
+
+    function showSection(secName) {
+        currentSection = secName;
+        document.getElementById("sec-start").style.display = "none";
+        document.getElementById("sec-kecerdasan").style.display = "none";
+        document.getElementById("sec-result").style.display = "none";
+        document.getElementById("sec-review").style.display = "none";
+
+        if (secName === "kecerdasan") {
+            document.getElementById("sec-kecerdasan").style.display = "block";
+            document.getElementById("headerSubTitle").innerText = "CAT SELEKSI POLRI - TES KECERDASAN VISUAL (50 SOAL)";
+        } else if (secName === "result") {
+            document.getElementById("sec-result").style.display = "block";
+            document.getElementById("headerSubTitle").innerText = "LAPORAN HASIL AKHIR TES KECERDASAN POLRI";
+        } else if (secName === "review") {
+            document.getElementById("sec-review").style.display = "block";
+            document.getElementById("headerSubTitle").innerText = "PEMBAHASAN & EVALUASI SOAL SIMULASI POLRI";
+        }
+    }
+
+    // --- KECERDASAN ENGINE ---
+    function initKecerdasanSection() {
+        renderKecerdasanNav();
+        loadKecerdasanQ(0);
+    }
+
+    function renderKecerdasanNav() {
+        let grid = document.getElementById("k-navGrid");
+        grid.innerHTML = "";
+        for (let i = 0; i < rawKecerdasan.length; i++) {
+            let div = document.createElement("div");
+            div.className = "nav-item";
+            if (userAnsKecerdasan[i] !== undefined) div.classList.add("filled");
+            if (i === currentKecerdasanIdx) div.classList.add("active");
+            div.innerText = i + 1;
+            div.onclick = () => { loadKecerdasanQ(i); };
+            grid.appendChild(div);
+        }
+    }
+
+    function loadKecerdasanQ(idx) {
+        currentKecerdasanIdx = idx;
+        let qData = rawKecerdasan[idx];
+
+        document.getElementById("k-q-no").innerText = "Soal " + (idx + 1) + " dari " + rawKecerdasan.length;
+        document.getElementById("k-q-text").innerText = qData.q;
+
+        let mediaBox = document.getElementById("k-q-media");
+        if (qData.media) {
+            mediaBox.style.display = "block";
+            mediaBox.innerHTML = qData.media;
+        } else {
+            mediaBox.style.display = "none";
+            mediaBox.innerHTML = "";
+        }
+
+        let optsContainer = document.getElementById("k-options");
+        optsContainer.innerHTML = "";
+
+        let labels = ["A", "B", "C", "D", "E"];
+        qData.opts.forEach((optText, oIdx) => {
+            let optDiv = document.createElement("div");
+            optDiv.className = "opt";
+            if (userAnsKecerdasan[idx] === oIdx) optDiv.classList.add("selected");
+
+            optDiv.innerHTML = "<b>" + labels[oIdx] + ".</b> " + optText;
+            optDiv.onclick = () => { selectKecerdasanAns(idx, oIdx); };
+            optsContainer.appendChild(optDiv);
+        });
+
+        // Update Nav Grid UI
+        renderKecerdasanNav();
+
+        // Update Next/Finish Button Label
+        let btnNext = document.getElementById("k-btn-next");
+        if (idx === rawKecerdasan.length - 1) {
+            btnNext.innerText = "Selesai & Kumpulkan";
+            btnNext.className = "btn btn-gold";
+        } else {
+            btnNext.innerText = "Selanjutnya";
+            btnNext.className = "btn";
+        }
+    }
+
+    function selectKecerdasanAns(qIdx, optIdx) {
+        userAnsKecerdasan[qIdx] = optIdx;
+        renderKecerdasanNav();
+        
+        let opts = document.getElementById("k-options").children;
+        for (let i = 0; i < opts.length; i++) {
+            opts[i].classList.remove("selected");
+        }
+        opts[optIdx].classList.add("selected");
+
+        // AUTONEXT KECERDASAN
+        setTimeout(() => {
+            if (currentKecerdasanIdx < rawKecerdasan.length - 1) {
+                nextQ_Kecerdasan();
+            } else {
+                finishKecerdasanSection();
+            }
+        }, 300);
+    }
+
+    function prevQ_Kecerdasan() {
+        if (currentKecerdasanIdx > 0) {
+            loadKecerdasanQ(currentKecerdasanIdx - 1);
+        }
+    }
+
+    function nextQ_Kecerdasan() {
+        if (currentKecerdasanIdx < rawKecerdasan.length - 1) {
+            loadKecerdasanQ(currentKecerdasanIdx + 1);
+        } else {
+            finishKecerdasanSection();
+        }
+    }
+
+    function finishKecerdasanSection() {
+        let countAns = Object.keys(userAnsKecerdasan).length;
+        if (countAns < rawKecerdasan.length) {
+            if (!confirm("Masih ada " + (rawKecerdasan.length - countAns) + " soal yang belum dijawab. Yakin ingin mengakhiri tes?")) {
+                return;
+            }
+        }
+
+        // Kalkulasi Skor Kecerdasan
+        let benar = 0;
+        for (let i = 0; i < rawKecerdasan.length; i++) {
+            if (userAnsKecerdasan[i] === rawKecerdasan[i].ans) {
+                benar++;
+            }
+        }
+        let skor = (benar / rawKecerdasan.length) * 100;
+        simulationResult.kecerdasan = {
+            userAns: userAnsKecerdasan,
+            benar: benar,
+            skor: Math.round(skor * 100) / 100
+        };
+
+        finishAllSimulation();
+    }
+
+    // -------------------------------------------------------------
+    // FINAL REKAP & SUBMIT KE APPS SCRIPT
+    // -------------------------------------------------------------
+    function finishAllSimulation() {
+        if (timerInterval) clearInterval(timerInterval);
+
+        let endDate = new Date();
+        let sessionEndTimeStr = formatTimeObj(endDate);
+
+        let durationMs = endDate.getTime() - sessionStartTimeMs;
+        let durMin = Math.floor(durationMs / 60000);
+        let durSec = Math.floor((durationMs % 60000) / 1000);
+        let sessionDurationStr = durMin + " Menit " + durSec + " Detik";
+
+        let skorK = simulationResult.kecerdasan.skor || 0;
+
+        // Render UI Hasil
+        document.getElementById("resNamaPeserta").innerText = "NAMA PESERTA: " + pName.toUpperCase();
+        document.getElementById("resValKecerdasan").innerText = skorK.toFixed(2);
+        document.getElementById("resDetailKecerdasan").innerText = "Jawaban Benar: " + simulationResult.kecerdasan.benar + " / 50 Soal";
+
+        showSection("result");
+
+        // KIRIM RESULT KE GOOGLE APPS SCRIPT
+        if (!isResultSubmitted) {
+            isResultSubmitted = true;
+            let payload = {
+                sessionId: currentSessionId,
+                namaSiswa: pName,
+                program: "POLRI",
+                namaTryout: "CAT KECERDASAN VISUAL POLRI (50 SOAL)",
+                tanggal: new Date().toLocaleDateString("id-ID"),
+                waktuMulai: sessionStartTimeStr,
+                waktuSelesai: sessionEndTimeStr,
+                durasi: sessionDurationStr,
+
+                kecerdasan: skorK,
+                kepribadian: "",
+                kecermatan: "",
+
+                tiu: "",
+                twk: "",
+                tkp: "",
+
+                pengetahuanUmum: "",
+
+                nilaiAkhir: skorK
+            };
+
+            fetch(APP_SCRIPT_URL, {
+                method: "POST",
+                mode: "no-cors",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload)
+            }).then(() => {
+                console.log("Hasil simulasi berhasil dikirim ke GS Master.");
+            }).catch(err => {
+                console.error("Gagal mengirim hasil ke GS Master: ", err);
+            });
+        }
+    }
+
+    // -------------------------------------------------------------
+    // PEMBAHASAN SECTION
+    // -------------------------------------------------------------
+    function showReviewSection() {
+        document.getElementById("reviewNamaPeserta").innerText = "PESERTA: " + pName.toUpperCase();
+
+        // Render Pembahasan Kecerdasan
+        let revK = document.getElementById("reviewContainerKecerdasan");
+        revK.innerHTML = "";
+        rawKecerdasan.forEach((qData, idx) => {
+            let uAns = simulationResult.kecerdasan.userAns[idx];
+            let isCorrect = (uAns === qData.ans);
+            let labels = ["A", "B", "C", "D", "E"];
+
+            let itemDiv = document.createElement("div");
+            itemDiv.className = "review-item " + (isCorrect ? "correct" : "incorrect");
+
+            let uAnsText = (uAns !== undefined) ? labels[uAns] + ". " + qData.opts[uAns] : "Tidak Dijawab";
+            let cAnsText = labels[qData.ans] + ". " + qData.opts[qData.ans];
+
+            let mediaHtml = qData.media ? `<div class="visual-container">${qData.media}</div>` : "";
+
+            itemDiv.innerHTML = 
+                "<div style='font-weight:bold; color:var(--navy); margin-bottom:5px;'>Soal " + (idx + 1) + "</div>" +
+                "<div style='margin-bottom:10px;'>" + qData.q + "</div>" +
+                mediaHtml +
+                "<div style='font-size:13px;'><b>Jawaban Anda:</b> <span style='color:" + (isCorrect ? "green" : "red") + ";'>" + uAnsText + "</span></div>" +
+                "<div style='font-size:13px;'><b>Kunci Jawaban:</b> <span style='color:green; font-weight:bold;'>" + cAnsText + "</span></div>" +
+                "<div class='pembahasan-box'><b>Pembahasan:</b><br>" + qData.exp + "</div>";
+
+            revK.appendChild(itemDiv);
+        });
+
+        showSection("review");
+    }
+
+    // -------------------------------------------------------------
+    // EXPORT PDF FUNCTIONS
+    // -------------------------------------------------------------
+    function downloadFullPDF() {
+        const { jsPDF } = window.jspdf;
+        let element = document.getElementById("sec-result");
+
+        html2canvas(element, { scale: 2 }).then(canvas => {
+            let imgData = canvas.toDataURL('image/png');
+            let pdf = new jsPDF('p', 'mm', 'a4');
+            let imgWidth = 210;
+            let pageHeight = 295;
+            let imgHeight = (canvas.height * imgWidth) / canvas.width;
+            let heightLeft = imgHeight;
+            let position = 0;
+
+            pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+            heightLeft -= pageHeight;
+
+            while (heightLeft >= 0) {
+                position = heightLeft - imgHeight;
+                pdf.addPage();
+                pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+                heightLeft -= pageHeight;
+            }
+
+            pdf.save("Laporan_Hasil_CAT_Kecerdasan_POLRI_" + pName.replace(/\s+/g, '_') + ".pdf");
+        });
+    }
+
+    function downloadReviewPDF() {
+        const { jsPDF } = window.jspdf;
+        let element = document.getElementById("reviewCaptureArea");
+
+        html2canvas(element, { scale: 2 }).then(canvas => {
+            let imgData = canvas.toDataURL('image/png');
+            let pdf = new jsPDF('p', 'mm', 'a4');
+            let imgWidth = 210;
+            let pageHeight = 295;
+            let imgHeight = (canvas.height * imgWidth) / canvas.width;
+            let heightLeft = imgHeight;
+            let position = 0;
+
+            pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+            heightLeft -= pageHeight;
+
+            while (heightLeft >= 0) {
+                position = heightLeft - imgHeight;
+                pdf.addPage();
+                pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+                heightLeft -= pageHeight;
+            }
+
+            pdf.save("Pembahasan_CAT_Kecerdasan_POLRI_" + pName.replace(/\s+/g, '_') + ".pdf");
+        });
+    }
+</script>
+</body>
+</html>

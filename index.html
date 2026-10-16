@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Simulasi CAT - Persona Research & Consulting</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0b2340;
+            --gold: #d4a017;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            background: var(--bg);
+            margin: 0;
+            padding: 0;
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background: var(--navy);
+            color: white;
+            padding: 25px 5%;
+            text-align: center;
+            border-bottom: 4px solid var(--gold);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            letter-spacing: 0.5px;
+        }
+        header p {
+            margin: 5px 0 0;
+            font-size: 13px;
+            color: var(--gold);
+            font-weight: bold;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+            flex: 1;
+        }
+        .intro-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .intro-card h2 {
+            margin-top: 0;
+            color: var(--navy);
+            font-size: 22px;
+        }
+        .intro-card p {
+            color: var(--text-muted);
+            font-size: 15px;
+            line-height: 1.6;
+            max-width: 700px;
+            margin: 10px auto 0;
+        }
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+        .menu-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border-top: 4px solid var(--navy);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .menu-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border-top-color: var(--gold);
+        }
+        .menu-card h3 {
+            color: var(--navy);
+            font-size: 18px;
+            margin: 10px 0 15px;
+        }
+        .menu-card p {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        .btn {
+            background: var(--navy);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            transition: background 0.2s;
+            font-size: 14px;
+        }
+        .btn:hover {
+            background: #14365d;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #e2e8f0;
+            color: var(--text-muted);
+            font-size: 12px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>PERSONA RESEARCH & CONSULTING</h1>
+        <p>PORTAL SIMULASI CAT UJIAN LOGIKA FIGURAL & SPASIAL</p>
+    </header>
+
+    <div class="container">
+        <div class="intro-card">
+            <h2>PILIHAN MODUL LATIHAN & SIMULASI CAT</h2>
+            <p>Silakan pilih menu simulasi ujian penalaran visual, figural, dan spasial di bawah ini untuk memulai sesi latihan dengan format soal interaktif lengkap beserta pembahasan otomatis.</p>
+        </div>
+
+        <div class="menu-grid">
+            <!-- Menu 1 -->
+            <div class="menu-card">
+                <div>
+                    <h3>Logika Gambar Spasial 1</h3>
+                    <p>Modul latihan kecerdasan visual dasar & orientasi spasial (50 soal komprehensif).</p>
+                </div>
+                <a href="visual_1.html" class="btn">Mulai Simulasi 1</a>
+            </div>
+
+            <!-- Menu 2 -->
+            <div class="menu-card">
+                <div>
+                    <h3>Logika Gambar Spasial 2</h3>
+                    <p>Modul simulasi CAT tingkat lanjut dengan variasi pola transformasi figural dan matriks.</p>
+                </div>
+                <a href="visual_2.html" class="btn">Mulai Simulasi 2</a>
+            </div>
+
+            <!-- Menu 3 -->
+            <div class="menu-card">
+                <div>
+                    <h3>Logika Gambar Spasial 3</h3>
+                    <p>Modul tingkat mahir (Advanced) dengan pengecoh visual kompleks dan analisis 3D mendalam.</p>
+                </div>
+                <a href="visual_3.html" class="btn">Mulai Simulasi 3</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 Persona Research & Consulting. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
