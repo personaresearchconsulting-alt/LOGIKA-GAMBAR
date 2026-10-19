@@ -220,13 +220,13 @@
                 <span style="font-size:24px; font-weight:bold; color:#c0392b;">?</span>
             </div>`,
             opts: [
-                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="3"/><line x1="25" y1="50" x2="75" y2="50" stroke="#0b2340" stroke-width="3"/><line x1="50" y1="25" x2="50" y2="75" stroke="#0b2340" stroke-width="3"/>'),
                 makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="3"/><line x1="50" y1="25" x2="50" y2="75" stroke="#0b2340" stroke-width="3"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="3"/><line x1="25" y1="50" x2="75" y2="50" stroke="#0b2340" stroke-width="3"/><line x1="50" y1="25" x2="50" y2="75" stroke="#0b2340" stroke-width="3"/>'),
                 makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="3"/>'),
                 makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="3"/><line x1="25" y1="25" x2="75" y2="75" stroke="#0b2340" stroke-width="3"/>'),
                 makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>')
             ],
-            ans: 0, exp: "Aturan baris menambah satu garis ortogonal baru dari 1 garis menjadi 2 garis di dalam bingkai geometri yang sama."
+            ans: 1, exp: "Aturan baris menambah satu garis ortogonal baru dari 1 garis menjadi 2 garis di dalam bingkai geometri yang sama."
         },
         {
             type: "3", title: "Matriks Figural 3x3 Kombinasi Arsiran & Posisi",
@@ -238,13 +238,13 @@
                 <span style="font-size:20px; font-weight:bold; color:#c0392b;">?</span>
             </div>`,
             opts: [
-                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="2"/><polygon points="20,20 80,20 50,80" fill="#0b2340"/>'),
                 makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="2"/><circle cx="50" cy="50" r="20" fill="none" stroke="#0b2340" stroke-width="3"/>'),
                 makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="2"/><polygon points="20,20 80,20 50,80" fill="#0b2340"/>'),
                 makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="2"/><line x1="25" y1="25" x2="75" y2="75" stroke="#0b2340" stroke-width="3"/>'),
                 makeFigSvg('<circle cx="50" cy="50" r="25" fill="#0b2340"/>')
             ],
-            ans: 0, exp: "Pola akumulasi bentuk isi hitam di dalam bingkai persegi mengikuti variasi poligon geometris terisi penuh."
+            ans: 2, exp: "Pola akumulasi bentuk isi hitam di dalam bingkai persegi mengikuti variasi poligon geometris terisi penuh."
         },
         {
             type: "4", title: "Analogi Spasial Transformasi Skala & Sudut",
@@ -259,13 +259,13 @@
                 <span style="font-size:24px; font-weight:bold; color:#c0392b;">?</span>
             </div>`,
             opts: [
-                makeFigSvg('<circle cx="50" cy="50" r="28" fill="none" stroke="#0b2340" stroke-width="5"/><line x1="22" y1="50" x2="78" y2="50" stroke="#0b2340" stroke-width="3"/>'),
                 makeFigSvg('<circle cx="50" cy="50" r="28" fill="none" stroke="#0b2340" stroke-width="2"/><line x1="22" y1="50" x2="78" y2="50" stroke="#0b2340" stroke-width="3"/>'),
                 makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
                 makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="5"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="none" stroke="#0b2340" stroke-width="5"/><line x1="22" y1="50" x2="78" y2="50" stroke="#0b2340" stroke-width="3"/>'),
                 makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>')
             ],
-            ans: 0, exp: "Ketebalan bingkai luar bertambah dari 2 ke 5, dan garis internal berotasi 90 derajat dengan ketebalan 3."
+            ans: 3, exp: "Ketebalan bingkai luar bertambah dari 2 ke 5, dan garis internal berotasi 90 derajat dengan ketebalan 3."
         },
         {
             type: "5", title: "Deret Pola Geometris Berselang-seling",
@@ -277,13 +277,13 @@
                 <span style="font-size:24px; font-weight:bold; color:#c0392b;">?</span>
             </div>`,
             opts: [
-                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="3"/><circle cx="50" cy="50" r="16" fill="none" stroke="#0b2340" stroke-width="2"/>'),
                 makeFigSvg('<polygon points="50,20 80,70 20,70" fill="none" stroke="#0b2340" stroke-width="3"/><circle cx="50" cy="50" r="16" fill="#0b2340"/>'),
                 makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>'),
                 makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
-                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>')
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="3"/><circle cx="50" cy="50" r="16" fill="none" stroke="#0b2340" stroke-width="2"/>')
             ],
-            ans: 0, exp: "Poligon luar bertambah jumlah sisinya secara bertahap (3 -> 4 -> 5 -> 4), dan lingkaran tengah membesar secara proporsional."
+            ans: 4, exp: "Poligon luar bertambah jumlah sisinya secara bertahap (3 -> 4 -> 5 -> 4), dan lingkaran tengah membesar secara proporsional."
         },
         {
             type: "6", title: "Siklus Pergerakan Sektor Gelap Kuadran",
@@ -312,13 +312,13 @@
                 <span style="font-size:24px; font-weight:bold; color:#c0392b;">?</span>
             </div>`,
             opts: [
-                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="2" transform="rotate(90 50 50)"/><circle cx="35" cy="50" r="4" fill="#0b2340"/><circle cx="65" cy="50" r="4" fill="#0b2340"/><circle cx="50" cy="50" r="4" fill="#0b2340"/><line x1="50" y1="30" x2="50" y2="70" stroke="#0b2340" stroke-width="2"/>'),
                 makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="2"/><circle cx="50" cy="35" r="4" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="2" transform="rotate(90 50 50)"/><circle cx="35" cy="50" r="4" fill="#0b2340"/><circle cx="65" cy="50" r="4" fill="#0b2340"/><circle cx="50" cy="50" r="4" fill="#0b2340"/><line x1="50" y1="30" x2="50" y2="70" stroke="#0b2340" stroke-width="2"/>'),
                 makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
                 makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>'),
                 makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
             ],
-            ans: 0, exp: "Persegi berotasi 45° akumulatif menjadi 90°, jumlah titik bertambah menjadi 3, dan garis internal berotasi tegak lurus."
+            ans: 1, exp: "Persegi berotasi 45° akumulatif menjadi 90°, jumlah titik bertambah menjadi 3, dan garis internal berotasi tegak lurus."
         },
         {
             type: "8", title: "Deret Reduksi Elemen Geometris Internal",
@@ -329,13 +329,13 @@
                 <span style="font-size:24px; font-weight:bold; color:#c0392b;">?</span>
             </div>`,
             opts: [
-                makeFigSvg('<circle cx="50" cy="50" r="30" fill="none" stroke="#0b2340" stroke-width="3"/><line x1="30" y1="30" x2="70" y2="70" stroke="#0b2340" stroke-width="2"/>'),
                 makeFigSvg('<circle cx="50" cy="50" r="30" fill="none" stroke="#0b2340" stroke-width="3"/>'),
                 makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="30" fill="none" stroke="#0b2340" stroke-width="3"/><line x1="30" y1="30" x2="70" y2="70" stroke="#0b2340" stroke-width="2"/>'),
                 makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>'),
                 makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
             ],
-            ans: 0, exp: "Jumlah garis internal dikurangi satu persatu secara berurutan, menyisakan tepat satu garis diagonal."
+            ans: 2, exp: "Jumlah garis internal dikurangi satu persatu secara berurutan, menyisakan tepat satu garis diagonal."
         },
         {
             type: "9", title: "Pergerakan Orbit Objek di Dalam Bingkai Segienam",
@@ -346,13 +346,13 @@
                 <span style="font-size:24px; font-weight:bold; color:#c0392b;">?</span>
             </div>`,
             opts: [
-                makeFigSvg('<polygon points="50,15 80,30 80,70 50,85 20,70 20,30" fill="none" stroke="#0b2340" stroke-width="2"/><circle cx="75" cy="55" r="4" fill="#0b2340"/><circle cx="35" cy="75" r="4" fill="#0b2340"/><circle cx="40" cy="25" r="4" fill="#0b2340"/>'),
                 makeFigSvg('<polygon points="50,15 80,30 80,70 50,85 20,70 20,30" fill="none" stroke="#0b2340" stroke-width="2"/><circle cx="50" cy="25" r="4" fill="#0b2340"/>'),
                 makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
                 makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
+                makeFigSvg('<polygon points="50,15 80,30 80,70 50,85 20,70 20,30" fill="none" stroke="#0b2340" stroke-width="2"/><circle cx="75" cy="55" r="4" fill="#0b2340"/><circle cx="35" cy="75" r="4" fill="#0b2340"/><circle cx="40" cy="25" r="4" fill="#0b2340"/>'),
                 makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
             ],
-            ans: 0, exp: "Ketiga titik lingkaran berotasi mengitari titik sudut segienam sejauh satu langkah posisi searah jarum jam."
+            ans: 3, exp: "Ketiga titik lingkaran berotasi mengitari titik sudut segienam sejauh satu langkah posisi searah jarum jam."
         },
         {
             type: "10", title: "Transformasi Peningkatan Kompleksitas Bintang",
@@ -364,13 +364,13 @@
                 <span style="font-size:24px; font-weight:bold; color:#c0392b;">?</span>
             </div>`,
             opts: [
-                makeFigSvg('<polygon points="50,15 65,38 90,42 70,60 75,85 50,68 25,85 30,60 10,42 35,38" fill="none" stroke="#0b2340" stroke-width="5"/><circle cx="50" cy="50" r="18" fill="none" stroke="#0b2340" stroke-width="3"/>'),
                 makeFigSvg('<polygon points="50,20 62,40 85,45 68,62 72,85 50,72 28,85 32,62 15,45 38,40" fill="none" stroke="#0b2340" stroke-width="2"/>'),
                 makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
                 makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
-                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
+                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>'),
+                makeFigSvg('<polygon points="50,15 65,38 90,42 70,60 75,85 50,68 25,85 30,60 10,42 35,38" fill="none" stroke="#0b2340" stroke-width="5"/><circle cx="50" cy="50" r="18" fill="none" stroke="#0b2340" stroke-width="3"/>')
             ],
-            ans: 0, exp: "Ketebalan garis luar meningkat menjadi 5px dan ukuran lingkaran internal membesar secara proporsional."
+            ans: 4, exp: "Ketebalan garis luar meningkat menjadi 5px dan ukuran lingkaran internal membesar secara proporsional."
         },
         {
             type: "11", title: "Rotasi Kompleks Poligon Asimetris 45°",
@@ -394,13 +394,13 @@
                 ${makeFigSvg('<path d="M 30 30 L 70 30 L 30 70 Z" fill="#0b2340"/>', 75)}
             </div>`,
             opts: [
-                makeFigSvg('<path d="M 30 30 L 70 70 L 70 30 Z" fill="#0b2340"/>'),
                 makeFigSvg('<path d="M 30 30 L 70 30 L 30 70 Z" fill="#0b2340"/>'),
+                makeFigSvg('<path d="M 30 30 L 70 70 L 70 30 Z" fill="#0b2340"/>'),
                 makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
                 makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
                 makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
             ],
-            ans: 0, exp: "Pencerminan terhadap diagonal utama membalik posisi sudut siku segitiga dari kiri bawah ke kanan atas."
+            ans: 1, exp: "Pencerminan terhadap diagonal utama membalik posisi sudut siku segitiga dari kiri bawah ke kanan atas."
         },
         {
             type: "13", title: "Refleksi Ganda Beruntun",
@@ -409,13 +409,13 @@
                 ${makeFigSvg('<path d="M 35 25 L 65 25 L 50 60 Z" fill="#0b2340"/>', 75)}
             </div>`,
             opts: [
-                makeFigSvg('<path d="M 35 75 L 65 75 L 50 40 Z" fill="#0b2340"/>'),
                 makeFigSvg('<path d="M 35 25 L 65 25 L 50 60 Z" fill="#0b2340"/>'),
                 makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
+                makeFigSvg('<path d="M 35 75 L 65 75 L 50 40 Z" fill="#0b2340"/>'),
                 makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
                 makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
             ],
-            ans: 0, exp: "Refleksi ganda horizontal dan vertikal menghasilkan rotasi 180 derajat penuh pada objek."
+            ans: 2, exp: "Refleksi ganda horizontal dan vertikal menghasilkan rotasi 180 derajat penuh pada objek."
         },
         {
             type: "14", title: "Translasi Vektor Kompleks dalam Grid",
@@ -424,13 +424,13 @@
                 ${makeFigSvg('<path d="M 25 25 L 40 25 L 40 55 L 60 55 L 60 70 L 25 70 Z" fill="#0b2340"/>', 75)}
             </div>`,
             opts: [
-                makeFigSvg('<path d="M 45 40 L 60 40 L 60 70 L 80 70 L 80 85 L 45 85 Z" fill="#0b2340"/>'),
                 makeFigSvg('<path d="M 25 25 L 40 25 L 40 55 L 60 55 L 60 70 L 25 70 Z" fill="#0b2340"/>'),
                 makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
                 makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
+                makeFigSvg('<path d="M 45 40 L 60 40 L 60 70 L 80 70 L 80 85 L 45 85 Z" fill="#0b2340"/>'),
                 makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>')
             ],
-            ans: 0, exp: "Translasi menggeser seluruh koordinat titik bentuk L secara diagonal ke arah kanan bawah."
+            ans: 3, exp: "Translasi menggeser seluruh koordinat titik bentuk L secara diagonal ke arah kanan bawah."
         },
         {
             type: "15", title: "Dilatasi Proporsional Sudut Ganda",
@@ -439,13 +439,13 @@
                 ${makeFigSvg('<rect x="35" y="35" width="30" height="30" fill="none" stroke="#0b2340" stroke-width="2"/><circle cx="50" cy="50" r="8" fill="#0b2340"/>', 75)}
             </div>`,
             opts: [
-                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="2"/><circle cx="50" cy="50" r="14" fill="#0b2340"/>'),
                 makeFigSvg('<rect x="35" y="35" width="30" height="30" fill="none" stroke="#0b2340" stroke-width="2"/><circle cx="50" cy="50" r="8" fill="#0b2340"/>'),
                 makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
                 makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
-                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>')
+                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="2"/><circle cx="50" cy="50" r="14" fill="#0b2340"/>')
             ],
-            ans: 0, exp: "Dilatasi proporsional memperbesar ukuran bingkai kotak luar dan diameter lingkaran tengah secara seimbang."
+            ans: 4, exp: "Dilatasi proporsional memperbesar ukuran bingkai kotak luar dan diameter lingkaran tengah secara seimbang."
         },
         {
             type: "16", title: "Transformasi Gabungan Rotasi & Skala",
@@ -469,13 +469,13 @@
                 ${makeFigSvg('<circle cx="50" cy="50" r="32" fill="none" stroke="#0b2340" stroke-width="2"/><rect x="33" y="33" width="34" height="34" fill="none" stroke="#0b2340" stroke-width="2"/><polygon points="50,40 60,60 40,60" fill="#0b2340"/>', 75)}
             </div>`,
             opts: [
-                makeFigSvg('<circle cx="50" cy="50" r="32" fill="none" stroke="#0b2340" stroke-width="2"/><rect x="33" y="33" width="34" height="34" fill="none" stroke="#0b2340" stroke-width="2"/><polygon points="50,60 40,40 60,40" fill="#0b2340"/>'),
                 makeFigSvg('<circle cx="50" cy="50" r="32" fill="none" stroke="#0b2340" stroke-width="2"/><rect x="33" y="33" width="34" height="34" fill="none" stroke="#0b2340" stroke-width="2"/><polygon points="50,40 60,60 40,60" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="32" fill="none" stroke="#0b2340" stroke-width="2"/><rect x="33" y="33" width="34" height="34" fill="none" stroke="#0b2340" stroke-width="2"/><polygon points="50,60 40,40 60,40" fill="#0b2340"/>'),
                 makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
                 makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
                 makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>')
             ],
-            ans: 0, exp: "Rotasi 180° membalik puncak segitiga di bagian dalam dari menghadap ke atas menjadi menghadap ke bawah."
+            ans: 1, exp: "Rotasi 180° membalik puncak segitiga di bagian dalam dari menghadap ke atas menjadi menghadap ke bawah."
         },
         {
             type: "18", title: "Transformasi Grid Titik Simpul Matrix",
@@ -484,13 +484,13 @@
                 ${makeFigSvg('<circle cx="30" cy="30" r="4" fill="#0b2340"/><circle cx="70" cy="70" r="4" fill="#0b2340"/><line x1="30" y1="30" x2="70" y2="70" stroke="#0b2340" stroke-width="2"/>', 75)}
             </div>`,
             opts: [
-                makeFigSvg('<circle cx="30" cy="30" r="4" fill="#0b2340"/><circle cx="70" cy="30" r="4" fill="#0b2340"/><circle cx="30" cy="70" r="4" fill="#0b2340"/><circle cx="70" cy="70" r="4" fill="#0b2340"/><line x1="30" y1="30" x2="70" y2="70" stroke="#0b2340" stroke-width="2"/><line x1="70" y1="30" x2="30" y2="70" stroke="#0b2340" stroke-width="2"/>'),
                 makeFigSvg('<circle cx="30" cy="30" r="4" fill="#0b2340"/><circle cx="70" cy="70" r="4" fill="#0b2340"/>'),
                 makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="30" cy="30" r="4" fill="#0b2340"/><circle cx="70" cy="30" r="4" fill="#0b2340"/><circle cx="30" cy="70" r="4" fill="#0b2340"/><circle cx="70" cy="70" r="4" fill="#0b2340"/><line x1="30" y1="30" x2="70" y2="70" stroke="#0b2340" stroke-width="2"/><line x1="70" y1="30" x2="30" y2="70" stroke="#0b2340" stroke-width="2"/>'),
                 makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
                 makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>')
             ],
-            ans: 0, exp: "Transformasi melengkapi seluruh sudut grid menjadi 4 titik dengan jaringan garis silang diagonal penuh."
+            ans: 2, exp: "Transformasi melengkapi seluruh sudut grid menjadi 4 titik dengan jaringan garis silang diagonal penuh."
         },
         {
             type: "19", title: "Pembalikan Urutan Lapisan Bentuk Bersarang",
@@ -499,13 +499,13 @@
                 ${makeFigSvg('<rect x="20" y="20" width="60" height="60" fill="none" stroke="#0b2340" stroke-width="2"/><circle cx="50" cy="50" r="22" fill="none" stroke="#0b2340" stroke-width="2"/><polygon points="50,32 68,62 32,62" fill="none" stroke="#0b2340" stroke-width="2"/>', 75)}
             </div>`,
             opts: [
-                makeFigSvg('<polygon points="50,22 78,72 22,72" fill="none" stroke="#0b2340" stroke-width="2"/><circle cx="50" cy="50" r="28" fill="none" stroke="#0b2340" stroke-width="2"/><rect x="28" y="28" width="44" height="44" fill="none" stroke="#0b2340" stroke-width="2"/>'),
                 makeFigSvg('<rect x="20" y="20" width="60" height="60" fill="none" stroke="#0b2340" stroke-width="2"/>'),
                 makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
                 makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>'),
+                makeFigSvg('<polygon points="50,22 78,72 22,72" fill="none" stroke="#0b2340" stroke-width="2"/><circle cx="50" cy="50" r="28" fill="none" stroke="#0b2340" stroke-width="2"/><rect x="28" y="28" width="44" height="44" fill="none" stroke="#0b2340" stroke-width="2"/>'),
                 makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
             ],
-            ans: 0, exp: "Pembalikan urutan menempatkan segitiga di posisi terluar, lingkaran di tengah, dan persegi di bagian dalam."
+            ans: 3, exp: "Pembalikan urutan menempatkan segitiga di posisi terluar, lingkaran di tengah, dan persegi di bagian dalam."
         },
         {
             type: "20", title: "Operasi Logika Boolean Irisan Eksklusif (XOR)",
@@ -514,13 +514,13 @@
                 ${makeFigSvg('<rect x="25" y="25" width="40" height="40" fill="none" stroke="#0b2340" stroke-width="2"/><circle cx="60" cy="60" r="20" fill="none" stroke="#0b2340" stroke-width="2"/>', 75)}
             </div>`,
             opts: [
-                makeFigSvg('<path d="M 25 25 L 65 25 L 65 40 A 20 20 0 0 1 40 65 L 25 65 Z" fill="none" stroke="#0b2340" stroke-width="2"/>'),
                 makeFigSvg('<rect x="25" y="25" width="40" height="40" fill="#0b2340"/>'),
                 makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
                 makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>'),
-                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
+                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>'),
+                makeFigSvg('<path d="M 25 25 L 65 25 L 65 40 A 20 20 0 0 1 40 65 L 25 65 Z" fill="none" stroke="#0b2340" stroke-width="2"/>')
             ],
-            ans: 0, exp: "Operasi XOR mempertahankan area luar gabungan dan menghilangkan irisan bertumpuk di tengah."
+            ans: 4, exp: "Operasi XOR mempertahankan area luar gabungan dan menghilangkan irisan bertumpuk di tengah."
         },
         {
             type: "21", title: "Perakitan Potongan Puzzle Segienam",
@@ -547,13 +547,13 @@
                 <span style="font-size:24px; font-weight:bold; color:#c0392b;">?</span>
             </div>`,
             opts: [
-                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="none" stroke="#0b2340" stroke-width="2"/>'),
                 makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
+                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="none" stroke="#0b2340" stroke-width="2"/>'),
                 makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
                 makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>'),
                 makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
             ],
-            ans: 0, exp: "Pengurangan elemen tengah menyisakan bingkai segitiga luar secara bersih."
+            ans: 1, exp: "Pengurangan elemen tengah menyisakan bingkai segitiga luar secara bersih."
         },
         {
             type: "23", title: "Irisan Universal Tiga Bangun Geometri",
@@ -562,13 +562,13 @@
                 ${makeFigSvg('<circle cx="50" cy="45" r="22" fill="none" stroke="#0b2340" stroke-width="1.5"/><rect x="30" y="30" width="40" height="40" fill="none" stroke="#0b2340" stroke-width="1.5"/><polygon points="50,20 80,75 20,75" fill="none" stroke="#0b2340" stroke-width="1.5"/>', 75)}
             </div>`,
             opts: [
-                makeFigSvg('<polygon points="43,45 57,45 50,60 Z" fill="#0b2340"/>'),
                 makeFigSvg('<circle cx="50" cy="50" r="15" fill="#0b2340"/>'),
                 makeFigSvg('<rect x="40" y="40" width="20" height="20" fill="#0b2340"/>'),
+                makeFigSvg('<polygon points="43,45 57,45 50,60 Z" fill="#0b2340"/>'),
                 makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>'),
                 makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
             ],
-            ans: 0, exp: "Irisan universal dari ketiga bentuk tersebut membentuk bidang segitiga kecil di titik pusat."
+            ans: 2, exp: "Irisan universal dari ketiga bentuk tersebut membentuk bidang segitiga kecil di titik pusat."
         },
         {
             type: "24", title: "De-komposisi Bintang Bersudut Lima",
@@ -577,13 +577,13 @@
                 ${makeFigSvg('<polygon points="50,15 61,38 85,38 66,54 73,78 50,63 27,78 34,54 15,38 39,38" fill="none" stroke="#0b2340" stroke-width="2" stroke-dasharray="3"/>', 75)}
             </div>`,
             opts: [
-                makeFigSvg('<polygon points="50,15 58,35 75,35 60,48 65,68 50,55 35,68 40,48 25,35 42,35" fill="#0b2340"/>'),
                 makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
                 makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
                 makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>'),
+                makeFigSvg('<polygon points="50,15 58,35 75,35 60,48 65,68 50,55 35,68 40,48 25,35 42,35" fill="#0b2340"/>'),
                 makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
             ],
-            ans: 0, exp: "Komponen pecahan unsur sudut bintang tersusun membentuk geometri bintang identik."
+            ans: 3, exp: "Komponen pecahan unsur sudut bintang tersusun membentuk geometri bintang identik."
         },
         {
             type: "25", title: "Perakitan Trapesium Sama Kaki",
@@ -592,13 +592,13 @@
                 ${makeFigSvg('<polygon points="40,30 60,30 75,70 25,70" fill="none" stroke="#0b2340" stroke-width="2" stroke-dasharray="2"/>', 75)}
             </div>`,
             opts: [
-                makeFigSvg('<polygon points="50,15 85,50 50,85 15,50" fill="#0b2340"/>'),
                 makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
                 makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
                 makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>'),
-                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
+                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>'),
+                makeFigSvg('<polygon points="50,15 85,50 50,85 15,50" fill="#0b2340"/>')
             ],
-            ans: 0, exp: "Empat potongan trapesium dirakit membentuk belah ketupat besar."
+            ans: 4, exp: "Empat potongan trapesium dirakit membentuk belah ketupat besar."
         },
         {
             type: "26", title: "Pencocokan Siluet Rongga Siku",
@@ -622,13 +622,13 @@
                 ${makeFigSvg('<circle cx="50" cy="50" r="30" fill="none" stroke="#0b2340" stroke-width="3"/><circle cx="50" cy="50" r="15" fill="none" stroke="#0b2340" stroke-width="2"/><line x1="50" y1="20" x2="50" y2="35" stroke="#0b2340" stroke-width="2"/>', 75)}
             </div>`,
             opts: [
-                makeFigSvg('<line x1="50" y1="65" x2="50" y2="80" stroke="#0b2340" stroke-width="2"/>'),
                 makeFigSvg('<line x1="20" y1="50" x2="35" y2="50" stroke="#0b2340" stroke-width="2"/>'),
+                makeFigSvg('<line x1="50" y1="65" x2="50" y2="80" stroke="#0b2340" stroke-width="2"/>'),
                 makeFigSvg('<circle cx="50" cy="50" r="5" fill="#0b2340"/>'),
                 makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
                 makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>')
             ],
-            ans: 0, exp: "Bagian yang hilang adalah segmen garis vertikal bawah untuk melengkapi simetri."
+            ans: 1, exp: "Bagian yang hilang adalah segmen garis vertikal bawah untuk melengkapi simetri."
         },
         {
             type: "28", title: "Pola Sambungan Kurva Labirin Geometris",
@@ -637,13 +637,13 @@
                 ${makeFigSvg('<path d="M 25 50 Q 50 20 75 50" fill="none" stroke="#0b2340" stroke-width="3"/><path d="M 75 50 Q 50 80 25 50" fill="none" stroke="#0b2340" stroke-width="3" stroke-dasharray="3"/>', 75)}
             </div>`,
             opts: [
-                makeFigSvg('<path d="M 75 50 Q 50 80 25 50" fill="none" stroke="#0b2340" stroke-width="3"/>'),
                 makeFigSvg('<line x1="25" y1="50" x2="75" y2="50" stroke="#0b2340" stroke-width="3"/>'),
                 makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
+                makeFigSvg('<path d="M 75 50 Q 50 80 25 50" fill="none" stroke="#0b2340" stroke-width="3"/>'),
                 makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
                 makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>')
             ],
-            ans: 0, exp: "Kurva bawah melengkapi bentuk oval tertutup secara simetris."
+            ans: 2, exp: "Kurva bawah melengkapi bentuk oval tertutup secara simetris."
         },
         {
             type: "29", title: "Penghitungan Bidang Tertutup Persegi Bersilang",
@@ -652,13 +652,13 @@
                 ${makeFigSvg('<rect x="25" y="25" width="40" height="40" fill="none" stroke="#0b2340" stroke-width="2"/><rect x="35" y="35" width="40" height="40" fill="none" stroke="#0b2340" stroke-width="2"/>', 75)}
             </div>`,
             opts: [
-                makeFigSvg('<text x="42" y="60" font-size="24" font-weight="bold" fill="#0b2340">9</text>'),
                 makeFigSvg('<text x="42" y="60" font-size="24" font-weight="bold" fill="#0b2340">7</text>'),
                 makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
                 makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
+                makeFigSvg('<text x="42" y="60" font-size="24" font-weight="bold" fill="#0b2340">9</text>'),
                 makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>')
             ],
-            ans: 0, exp: "Irisan dua persegi bersilang menghasilkan total 9 bidang kecil."
+            ans: 3, exp: "Irisan dua persegi bersilang menghasilkan total 9 bidang kecil."
         },
         {
             type: "30", title: "Odd-one-out Anomali Posisi Pusat",
@@ -693,26 +693,26 @@
                 ${makeFigSvg('<path d="M 30 30 L 70 30 L 50 70 Z" fill="#0b2340"/>', 75)}
             </div>`,
             opts: [
-                makeFigSvg('<path d="M 30 70 L 30 30 L 70 50 Z" fill="#0b2340"/>'),
                 makeFigSvg('<path d="M 70 30 L 30 50 L 70 70 Z" fill="#0b2340"/>'),
+                makeFigSvg('<path d="M 30 70 L 30 30 L 70 50 Z" fill="#0b2340"/>'),
                 makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
                 makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
                 makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
             ],
-            ans: 0, exp: "Opsi A adalah hasil rotasi 90° berlawanan arah jarum jam dari segitiga acuan."
+            ans: 1, exp: "Opsi A adalah hasil rotasi 90° berlawanan arah jarum jam dari segitiga acuan."
         },
         {
             type: "33", title: "Deteksi Anomali Ketebalan Garis Mikro",
             q: "Temukan satu gambar yang memiliki ketebalan garis bingkai berbeda dibanding empat pilihan lainnya!",
             media: `<div style="font-size:13px; font-weight:bold; color:#64748b; margin-bottom:5px;">Deteksi Anomali Mikro:</div>`,
             opts: [
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="2"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="2"/>'),
                 makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="5"/>'),
-                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="2"/>'),
-                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="2"/>'),
                 makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="2"/>'),
                 makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="2"/>')
             ],
-            ans: 0, exp: "Opsi A memiliki ketebalan garis 5px, sedangkan opsi lain 2px."
+            ans: 2, exp: "Opsi A memiliki ketebalan garis 5px, sedangkan opsi lain 2px."
         },
         {
             type: "34", title: "Pencarian Rasio Luas Setara 50:50",
@@ -721,26 +721,26 @@
                 ${makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/><path d="M 25 25 L 75 75 L 25 75 Z" fill="#fff"/>', 60)}
             </div>`,
             opts: [
-                makeFigSvg('<circle cx="50" cy="50" r="25" fill="#0b2340"/><path d="M 50 25 A 25 25 0 0 1 50 75 Z" fill="#fff"/>'),
                 makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
                 makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
                 makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="25" fill="#0b2340"/><path d="M 50 25 A 25 25 0 0 1 50 75 Z" fill="#fff"/>'),
                 makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
             ],
-            ans: 0, exp: "Opsi A membagi setengah lingkaran penuh dengan rasio luas 50%."
+            ans: 3, exp: "Opsi A membagi setengah lingkaran penuh dengan rasio luas 50%."
         },
         {
             type: "35", title: "Simetri Radial Tingkat Enam",
             q: "Manakah gambar di bawah ini yang memiliki simetri radial tingkat enam sempurna?",
             media: `<div style="font-size:13px; font-weight:bold; color:#64748b; margin-bottom:5px;">Uji Simetri Radial:</div>`,
             opts: [
-                makeFigSvg('<polygon points="50,15 80,30 80,70 50,85 20,70 20,30" fill="none" stroke="#0b2340" stroke-width="3"/><path d="M 50 15 L 50 85 M 20 30 L 80 70 M 20 70 L 80 30" stroke="#0b2340" stroke-width="2"/>'),
                 makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="3"/>'),
                 makeFigSvg('<circle cx="50" cy="50" r="28" fill="none" stroke="#0b2340" stroke-width="3"/>'),
                 makeFigSvg('<polygon points="50,15 85,85 15,85" fill="none" stroke="#0b2340" stroke-width="3"/>'),
-                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
+                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>'),
+                makeFigSvg('<polygon points="50,15 80,30 80,70 50,85 20,70 20,30" fill="none" stroke="#0b2340" stroke-width="3"/><path d="M 50 15 L 50 85 M 20 30 L 80 70 M 20 70 L 80 30" stroke="#0b2340" stroke-width="2"/>')
             ],
-            ans: 0, exp: "Segienam dengan 3 diagonal melintang memiliki simetri radial tingkat 6 sempurna."
+            ans: 4, exp: "Segienam dengan 3 diagonal melintang memiliki simetri radial tingkat 6 sempurna."
         },
         {
             type: "36", title: "Invariansi Topologi Transformasi Lentur",
@@ -762,13 +762,13 @@
             q: "Pilih bentuk yang memiliki jumlah sudut dalam lebih besar dari 108 derajat pada seluruh simpulnya!",
             media: `<div style="font-size:13px; font-weight:bold; color:#64748b; margin-bottom:5px;">Uji Besaran Sudut Dalam:</div>`,
             opts: [
-                makeFigSvg('<polygon points="50,15 80,30 80,70 50,85 20,70 20,30" fill="none" stroke="#0b2340" stroke-width="3"/>'),
                 makeFigSvg('<polygon points="50,20 80,70 20,70" fill="none" stroke="#0b2340" stroke-width="3"/>'),
+                makeFigSvg('<polygon points="50,15 80,30 80,70 50,85 20,70 20,30" fill="none" stroke="#0b2340" stroke-width="3"/>'),
                 makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="3"/>'),
                 makeFigSvg('<polygon points="50,20 75,40 65,75 35,75 25,40" fill="none" stroke="#0b2340" stroke-width="3"/>'),
                 makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
             ],
-            ans: 0, exp: "Segienam reguler memiliki sudut dalam sebesar 120 derajat (> 108 derajat)."
+            ans: 1, exp: "Segienam reguler memiliki sudut dalam sebesar 120 derajat (> 108 derajat)."
         },
         {
             type: "38", title: "Proyeksi Ortogonal 3D ke 2D Sisi Atas",
@@ -777,13 +777,13 @@
                 ${makeFigSvg('<rect x="20" y="20" width="60" height="60" fill="none" stroke="#0b2340" stroke-width="2"/><rect x="35" y="35" width="30" height="30" fill="none" stroke="#0b2340" stroke-width="2"/><line x1="20" y1="20" x2="35" y2="35" stroke="#0b2340"/><line x1="80" y1="20" x2="65" y2="35" stroke="#0b2340"/><line x1="80" y1="80" x2="65" y2="65" stroke="#0b2340"/><line x1="20" y1="80" x2="35" y2="65" stroke="#0b2340"/>', 75)}
             </div>`,
             opts: [
-                makeFigSvg('<rect x="20" y="20" width="60" height="60" fill="none" stroke="#0b2340" stroke-width="2"/><rect x="35" y="35" width="30" height="30" fill="none" stroke="#0b2340" stroke-width="2"/><line x1="20" y1="20" x2="35" y2="35" stroke="#0b2340"/><line x1="80" y1="20" x2="65" y2="35" stroke="#0b2340"/><line x1="80" y1="80" x2="65" y2="65" stroke="#0b2340"/><line x1="20" y1="80" x2="35" y2="65" stroke="#0b2340"/>'),
                 makeFigSvg('<rect x="20" y="20" width="60" height="60" fill="none" stroke="#0b2340" stroke-width="2"/>'),
                 makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="20" y="20" width="60" height="60" fill="none" stroke="#0b2340" stroke-width="2"/><rect x="35" y="35" width="30" height="30" fill="none" stroke="#0b2340" stroke-width="2"/><line x1="20" y1="20" x2="35" y2="35" stroke="#0b2340"/><line x1="80" y1="20" x2="65" y2="35" stroke="#0b2340"/><line x1="80" y1="80" x2="65" y2="65" stroke="#0b2340"/><line x1="20" y1="80" x2="35" y2="65" stroke="#0b2340"/>'),
                 makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>'),
                 makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
             ],
-            ans: 0, exp: "Tampak atas piramida terpotong memperlihatkan dua persegi konsentris terhubung garis diagonal."
+            ans: 2, exp: "Tampak atas piramida terpotong memperlihatkan dua persegi konsentris terhubung garis diagonal."
         },
         {
             type: "39", title: "Jaring-jaring Kubus Sisi Berwarna",
@@ -792,13 +792,13 @@
                 ${makeFigSvg('<rect x="10" y="40" width="20" height="20" fill="#0b2340"/><rect x="30" y="40" width="20" height="20" fill="none" stroke="#0b2340"/><rect x="50" y="40" width="20" height="20" fill="none" stroke="#0b2340"/><line x1="50" y1="40" x2="70" y2="60" stroke="#0b2340"/><rect x="70" y="40" width="20" height="20" fill="none" stroke="#0b2340"/>', 75)}
             </div>`,
             opts: [
-                makeFigSvg('<rect x="10" y="40" width="20" height="20" fill="#0b2340"/><rect x="30" y="40" width="20" height="20" fill="none" stroke="#0b2340"/><rect x="50" y="40" width="20" height="20" fill="none" stroke="#0b2340"/><line x1="50" y1="40" x2="70" y2="60" stroke="#0b2340"/><rect x="70" y="40" width="20" height="20" fill="none" stroke="#0b2340"/>'),
                 makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
                 makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
                 makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="10" y="40" width="20" height="20" fill="#0b2340"/><rect x="30" y="40" width="20" height="20" fill="none" stroke="#0b2340"/><rect x="50" y="40" width="20" height="20" fill="none" stroke="#0b2340"/><line x1="50" y1="40" x2="70" y2="60" stroke="#0b2340"/><rect x="70" y="40" width="20" height="20" fill="none" stroke="#0b2340"/>'),
                 makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
             ],
-            ans: 0, exp: "Jaring-jaring memisahkan dua sisi khusus dengan jarak tepat satu kotak penjelas."
+            ans: 3, exp: "Jaring-jaring memisahkan dua sisi khusus dengan jarak tepat satu kotak penjelas."
         },
         {
             type: "40", title: "Visualisasi Mental Rotasi 3D Sumbu Y",
@@ -807,13 +807,13 @@
                 ${makeFigSvg('<path d="M 30 20 L 50 20 L 50 60 L 70 60 L 70 80 L 30 80 Z" fill="#0b2340"/>', 75)}
             </div>`,
             opts: [
-                makeFigSvg('<path d="M 30 20 L 50 20 L 50 60 L 70 60 L 70 80 L 30 80 Z" transform="skewY(15)" fill="#0b2340"/>'),
                 makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
                 makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
                 makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>'),
-                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
+                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>'),
+                makeFigSvg('<path d="M 30 20 L 50 20 L 50 60 L 70 60 L 70 80 L 30 80 Z" transform="skewY(15)" fill="#0b2340"/>')
             ],
-            ans: 0, exp: "Rotasi sumbu vertikal mengubah kedalaman perspektif objek secara distorsi perspektif tegak."
+            ans: 4, exp: "Rotasi sumbu vertikal mengubah kedalaman perspektif objek secara distorsi perspektif tegak."
         },
         {
             type: "41", title: "Penentuan Irisan Penampang Bidang Datar",
@@ -835,13 +835,13 @@
                 ${makeFigSvg('<circle cx="50" cy="50" r="10" fill="#0b2340"/><circle cx="20" cy="50" r="6" fill="#0b2340"/><circle cx="80" cy="50" r="6" fill="#0b2340"/><circle cx="50" cy="20" r="6" fill="#0b2340"/><circle cx="50" cy="80" r="6" fill="#0b2340"/><line x1="20" y1="50" x2="80" y2="50" stroke="#0b2340"/><line x1="50" y1="20" x2="50" y2="80" stroke="#0b2340"/>', 75)}
             </div>`,
             opts: [
-                makeFigSvg('<text x="42" y="60" font-size="24" font-weight="bold" fill="#0b2340">4</text>'),
                 makeFigSvg('<text x="42" y="60" font-size="24" font-weight="bold" fill="#0b2340">6</text>'),
+                makeFigSvg('<text x="42" y="60" font-size="24" font-weight="bold" fill="#0b2340">4</text>'),
                 makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
                 makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
                 makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>')
             ],
-            ans: 0, exp: "Terdapat tepat 4 simpul bola luar terhubung ke titik pusat."
+            ans: 1, exp: "Terdapat tepat 4 simpul bola luar terhubung ke titik pusat."
         },
         {
             type: "43", title: "Penilaian Keseimbangan Momen Inersia",
@@ -850,13 +850,13 @@
                 ${makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/><polygon points="50,50 45,65 55,65" fill="#0b2340"/><rect x="20" y="40" width="10" height="10" fill="#0b2340"/><rect x="70" y="40" width="10" height="10" fill="#0b2340"/>', 75)}
             </div>`,
             opts: [
-                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/><polygon points="50,50 45,65 55,65" fill="#0b2340"/><rect x="20" y="40" width="10" height="10" fill="#0b2340"/><rect x="70" y="40" width="10" height="10" fill="#0b2340"/>'),
                 makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
                 makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
+                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/><polygon points="50,50 45,65 55,65" fill="#0b2340"/><rect x="20" y="40" width="10" height="10" fill="#0b2340"/><rect x="70" y="40" width="10" height="10" fill="#0b2340"/>'),
                 makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>'),
                 makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
             ],
-            ans: 0, exp: "Jarak beban sama (30 unit dari tumpuan) menciptakan momen inersia seimbang."
+            ans: 2, exp: "Jarak beban sama (30 unit dari tumpuan) menciptakan momen inersia seimbang."
         },
         {
             type: "44", title: "Arah Rotasi Roda Gigi Bersambung",
@@ -865,13 +865,13 @@
                 ${makeFigSvg('<circle cx="25" cy="50" r="15" fill="none" stroke="#0b2340" stroke-width="3"/><circle cx="50" cy="50" r="10" fill="none" stroke="#0b2340" stroke-width="3"/><circle cx="75" cy="50" r="15" fill="none" stroke="#0b2340" stroke-width="3"/>', 75)}
             </div>`,
             opts: [
-                makeFigSvg('<path d="M 30 50 A 20 20 0 1 1 70 50" fill="none" stroke="#0b2340" stroke-width="3" marker-end="url(#arrow)"/>'),
                 makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
                 makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
                 makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>'),
+                makeFigSvg('<path d="M 30 50 A 20 20 0 1 1 70 50" fill="none" stroke="#0b2340" stroke-width="3" marker-end="url(#arrow)"/>'),
                 makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
             ],
-            ans: 0, exp: "Roda A (CW) -> Roda B (CCW) -> Roda C berputar searah jarum jam (CW)."
+            ans: 3, exp: "Roda A (CW) -> Roda B (CCW) -> Roda C berputar searah jarum jam (CW)."
         },
         {
             type: "45", title: "Lintasan Vektor Pembiasan Sudut",
@@ -880,13 +880,13 @@
                 ${makeFigSvg('<path d="M 20 20 L 20 80 L 80 80" fill="none" stroke="#0b2340" stroke-width="3"/><polyline points="20,30 50,80 80,50" fill="none" stroke="#c0392b" stroke-width="2"/>', 75)}
             </div>`,
             opts: [
-                makeFigSvg('<polyline points="20,30 50,80 80,50" fill="none" stroke="#c0392b" stroke-width="2"/>'),
                 makeFigSvg('<line x1="20" y1="30" x2="80" y2="30" stroke="#0b2340" stroke-width="2"/>'),
                 makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
                 makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
-                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>')
+                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>'),
+                makeFigSvg('<polyline points="20,30 50,80 80,50" fill="none" stroke="#c0392b" stroke-width="2"/>')
             ],
-            ans: 0, exp: "Hukum pemantulan cahaya: sudut datang sama dengan sudut pantul pada bidang cermin tegak lurus."
+            ans: 4, exp: "Hukum pemantulan cahaya: sudut datang sama dengan sudut pantul pada bidang cermin tegak lurus."
         },
         {
             type: "46", title: "Integrasi Logika Figural Kompleks Tingkat Tinggi",
@@ -914,13 +914,13 @@
                 ${makeFigSvg('<circle cx="50" cy="50" r="25" fill="none" stroke="#0b2340" stroke-width="2"/><line x1="25" y1="50" x2="75" y2="50" stroke="#0b2340"/><line x1="50" y1="25" x2="50" y2="75" stroke="#0b2340"/>', 60)}
             </div>`,
             opts: [
-                makeFigSvg('<circle cx="50" cy="50" r="25" fill="none" stroke="#0b2340" stroke-width="2"/><line x1="25" y1="50" x2="75" y2="50" stroke="#0b2340"/><line x1="50" y1="25" x2="50" y2="75" stroke="#0b2340"/>'),
                 makeFigSvg('<circle cx="50" cy="50" r="25" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="25" fill="none" stroke="#0b2340" stroke-width="2"/><line x1="25" y1="50" x2="75" y2="50" stroke="#0b2340"/><line x1="50" y1="25" x2="50" y2="75" stroke="#0b2340"/>'),
                 makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
                 makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>'),
                 makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
             ],
-            ans: 0, exp: "Kolom ketiga merupakan hasil penggabungan sempurna (OR) dari kolom pertama dan kolom kedua."
+            ans: 1, exp: "Kolom ketiga merupakan hasil penggabungan sempurna (OR) dari kolom pertama dan kolom kedua."
         },
         {
             type: "48", title: "Siklus Rotasi Terkunci Tiga Deret",
@@ -931,13 +931,13 @@
                 ${makeFigSvg('<circle cx="50" cy="50" r="28" fill="none" stroke="#0b2340" stroke-width="2"/><line x1="50" y1="50" x2="72" y2="63" stroke="#0b2340" stroke-width="3"/>', 60)}
             </div>`,
             opts: [
-                makeFigSvg('<circle cx="50" cy="50" r="28" fill="none" stroke="#0b2340" stroke-width="2"/><line x1="50" y1="50" x2="50" y2="75" stroke="#0b2340" stroke-width="3"/>'),
                 makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
                 makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="none" stroke="#0b2340" stroke-width="2"/><line x1="50" y1="50" x2="50" y2="75" stroke="#0b2340" stroke-width="3"/>'),
                 makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>'),
                 makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
             ],
-            ans: 0, exp: "Jarum penunjuk berputar 60 derajat searah jarum jam menuju posisi tegak lurus bawah (180 derajat)."
+            ans: 2, exp: "Jarum penunjuk berputar 60 derajat searah jarum jam menuju posisi tegak lurus bawah (180 derajat)."
         },
         {
             type: "49", title: "Operasi Logika Pengurangan Elemen Bertumpuk",
@@ -949,13 +949,13 @@
                 <span style="font-size:24px; font-weight:bold; color:#c0392b;">?</span>
             </div>`,
             opts: [
-                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="2"/>'),
                 makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
                 makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
                 makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="2"/>'),
                 makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
             ],
-            ans: 0, exp: "Pengurangan menghapus garis diagonal internal dan menyisakan persegi luar."
+            ans: 3, exp: "Pengurangan menghapus garis diagonal internal dan menyisakan persegi luar."
         },
         {
             type: "50", title: "Puncak Master Integrasi Logika Spasial-Figural",
@@ -967,13 +967,13 @@
                 <span style="font-size:24px; font-weight:bold; color:#c0392b;">?</span>
             </div>`,
             opts: [
-                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="2"/><circle cx="35" cy="65" r="6" fill="none" stroke="#0b2340" stroke-width="2"/>'),
                 makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
                 makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
                 makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>'),
-                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
+                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="2"/><circle cx="35" cy="65" r="6" fill="none" stroke="#0b2340" stroke-width="2"/>')
             ],
-            ans: 0, exp: "Titik berpindah searah jarum jam ke sudut kiri-bawah (kuadran 4) dengan pembalikan warna dari hitam menjadi putih berongga."
+            ans: 4, exp: "Titik berpindah searah jarum jam ke sudut kiri-bawah (kuadran 4) dengan pembalikan warna dari hitam menjadi putih berongga."
         }
     ];
 
