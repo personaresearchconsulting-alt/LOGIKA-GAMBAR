@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAT LOGIKA FIGURAL & SPASIAL 50 TIPE ULTIMATE ADVANCED - Persona Research & Consulting</title>
+    
+    <!-- Fonts & Libraries -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root { 
+            --navy: #0b2340; 
+            --gold: #d4a017; 
+            --bg: #f8fafc; 
+            --gray: #f1f5f9; 
+            --danger: #c0392b; 
+        }
+        * { box-sizing: border-box; }
+        body { 
+            font-family: 'Inter', 'Segoe UI', sans-serif; 
+            background: var(--bg); 
+            margin: 0; 
+            padding: 0; 
+            color: #1e293b; 
+        }
+
+        /* HEADER MASTER */
+        header { 
+            background: var(--navy); 
+            color: white; 
+            padding: 15px 5%; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            border-bottom: 4px solid var(--gold); 
+        }
+        .header-title h1 { margin: 0; font-size: 18px; color: #fff; }
+        .header-title p { margin: 3px 0 0; font-size: 11px; color: var(--gold); font-weight: bold; }
+        .timer-badge { font-size: 20px; font-weight: bold; color: var(--gold); font-family: monospace; }
+
+        .container { max-width: 950px; margin: 20px auto; padding: 0 15px; }
+        .card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+
+        /* INPUT / LOGIN SECTION */
+        .user-card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; }
+        .user-card input { width: 80%; max-width: 400px; padding: 12px; font-size: 16px; border: 2px solid #cbd5e1; border-radius: 8px; text-align: center; margin-top: 15px; outline: none; display: block; margin-left: auto; margin-right: auto; }
+        
+        /* OPTION CARDS */
+        .opt { padding: 10px 14px; margin: 8px 0; border: 2px solid #e2e8f0; border-radius: 8px; cursor: pointer; transition: 0.2s; background: #fff; text-align: left; line-height: 1.5; font-size: 14px; display: flex; align-items: center; gap: 12px; }
+        .opt:hover { background: #f1f5f9; border-color: var(--navy); }
+        .opt.selected { background: #e0f2fe; border-color: var(--navy); font-weight: bold; }
+
+        /* NAVIGASI SOAL GRID */
+        .nav-grid { display: grid; grid-template-columns: repeat(10, 1fr); gap: 6px; margin-top: 15px; }
+        .nav-item { height: 35px; display: flex; align-items: center; justify-content: center; border: 1px solid #cbd5e1; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: bold; background: #fff; }
+        .nav-item.filled { background: var(--navy); color: white; }
+        .nav-item.active { border: 2px solid var(--gold); background: #fef08a; color: #000; }
+
+        /* BUTTONS */
+        .btn { background: var(--navy); color: white; border: none; padding: 12px 24px; border-radius: 8px; cursor: pointer; font-weight: bold; text-decoration: none; text-align: center; display: inline-block; }
+        .btn-gold { background: var(--gold); color: var(--navy); }
+        .btn-green { background: #27ae60; color: white; }
+
+        /* REKAP & RESULT AREA */
+        .final-box { background: var(--navy); color: #fff; padding: 25px; border-radius: 16px; text-align: center; margin-bottom: 25px; }
+        .final-val { font-size: 56px; font-weight: 900; color: var(--gold); margin: 10px 0; }
+
+        /* PEMBAHASAN CONTAINER */
+        .review-item { background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 15px; margin-bottom: 15px; }
+        .review-item.correct { border-left: 6px solid #27ae60; }
+        .review-item.incorrect { border-left: 6px solid var(--danger); }
+        .pembahasan-box { background: #f1f5f9; padding: 12px; border-radius: 6px; margin-top: 10px; font-size: 13px; border-left: 3px solid var(--gold); }
+
+        /* VISUAL MEDIA */
+        .visual-container { margin: 15px 0; text-align: center; background: #fafafa; border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px; overflow-x: auto; }
+        .visual-container svg { max-width: 100%; height: auto; display: inline-block; }
+    </style>
+</head>
+<body>
+
+<!-- MASTER HEADER -->
+<header id="masterHeader">
+    <div class="header-title">
+        <h1 id="headerMainTitle">PERSONA RESEARCH & CONSULTING</h1>
+        <p id="headerSubTitle">CAT LOGIKA FIGURAL & SPASIAL (50 TIPE ULTIMATE ADVANCED 3.0)</p>
+    </div>
+    <div id="timer" class="timer-badge">60:00</div>
+</header>
+
+<div class="container">
+    <!-- SECTION 1: START / IDENTITAS -->
+    <div id="sec-start" class="user-card">
+        <h2 style="margin:0; color:var(--navy);">IDENTITAS PESERTA TES LOGIKA FIGURAL & SPASIAL</h2>
+        <p style="font-size:14px; color:#64748b; margin-top:5px;">Simulasi CAT 50 Soal Tingkat Lanjut Edisi Ketiga (Ultimate Difficulty) dengan Pengecoh Visual Super Ketat (100% SVG).</p>
+        <input type="text" id="inputNama" placeholder="Masukkan Nama Lengkap Peserta..." autocomplete="off">
+        <br><br>
+        <button class="btn btn-gold" style="font-size: 18px; padding: 15px 40px;" onclick="startFullSimulation()">MULAI SIMULASI CAT</button>
+    </div>
+
+    <!-- SECTION 2: TES FIGURAL -->
+    <div id="sec-kecerdasan" style="display:none;">
+        <div style="display:flex; gap:20px; flex-wrap:wrap;">
+            <div style="flex:3; min-width:300px;">
+                <div class="card">
+                    <div id="k-q-no" style="font-weight:bold; color:var(--navy); margin-bottom:10px;">Soal 1 dari 50</div>
+                    <div id="k-q-text" style="font-size:15px; line-height:1.6; margin-bottom:15px;"></div>
+                    <div id="k-q-media" class="visual-container" style="display:none;"></div>
+                    <div id="k-options"></div>
+                    <div style="margin-top:25px; display:flex; justify-content:space-between;">
+                        <button class="btn" onclick="prevQ_Kecerdasan()" style="background:#64748b">Sebelumnya</button>
+                        <button class="btn" id="k-btn-next" onclick="nextQ_Kecerdasan()">Selanjutnya</button>
+                    </div>
+                </div>
+            </div>
+            <div style="flex:1; min-width:250px;">
+                <div class="card" style="padding:15px;">
+                    <div style="text-align:center; font-size:12px; font-weight:bold; margin-bottom:10px;">NAVIGASI 50 TIPE SOAL</div>
+                    <div id="k-navGrid" class="nav-grid"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 3: HASIL / REKAP AKHIR -->
+    <div id="sec-result" style="display:none;">
+        <div class="card">
+            <div style="text-align:center; border-bottom:2px solid #eee; padding-bottom:15px; margin-bottom:20px;">
+                <h2 style="margin:0; color:var(--navy);">LAPORAN HASIL AKHIR LOGIKA FIGURAL & SPASIAL</h2>
+                <p style="margin:5px 0 0; color:var(--gold); font-weight:bold;">PERSONA RESEARCH & CONSULTING - WA: 0877 425 5786</p>
+            </div>
+
+            <div id="resNamaPeserta" style="background:#eef6ff; padding:15px; border-radius:12px; margin-bottom:25px; font-weight:bold; font-size:18px; color:var(--navy); text-align:center;">
+                NAMA PESERTA: -
+            </div>
+
+            <div class="final-box">
+                <div>NILAI AKHIR TES KOMPREHENSIF</div>
+                <div class="final-val" id="resValKecerdasan">0.00</div>
+                <div style="font-size: 14px; opacity: 0.9;" id="resDetailKecerdasan">Jawaban Benar: 0 / 50 Soal</div>
+            </div>
+
+            <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:20px;">
+                <button class="btn btn-green" style="flex:1; padding:15px;" onclick="window.print()">📥 CETAK / SIMPAN PDF</button>
+                <button class="btn btn-gold" style="flex:1; padding:15px;" onclick="showReviewSection()">📖 LIHAT PEMBAHASAN SOAL</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 4: PEMBAHASAN / REVIEW -->
+    <div id="sec-review" style="display:none;">
+        <div class="card">
+            <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:2px solid #eee; padding-bottom:15px; margin-bottom:20px;">
+                <h2 style="margin:0; color:var(--navy);">PEMBAHASAN & EVALUASI 50 TIPE SOAL</h2>
+                <div style="display:flex; gap:10px;">
+                    <button class="btn btn-green" onclick="window.print()">📥 CETAK PEMBAHASAN</button>
+                    <button class="btn" onclick="showSection('result')">Kembali ke Hasil</button>
+                </div>
+            </div>
+            
+            <div style="text-align:center; margin-bottom:20px; border-bottom:2px solid var(--navy); padding-bottom:10px;">
+                <h3 style="margin:0; color:var(--navy);">DOKUMEN PEMBAHASAN LENGKAP 50 TIPE ULTIMATE ADVANCED (EDISI 3.0)</h3>
+                <p id="reviewNamaPeserta" style="margin:5px 0 0; color:var(--gold); font-weight:bold;">PESERTA: -</p>
+            </div>
+
+            <div id="reviewContainerKecerdasan"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const APP_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyFxmO0ocvr5HqK2WuGyjt7_JeTOcs4vGDg7QZejeiE2QvCP_qkonJcZc5hz9AFW2Vg/exec";
+
+    let currentIdx_Kecerdasan = 0;
+    let timerInterval = null;
+    let timerLeft = 3600; // 60 Menit
+    let pName = "";
+    let isResultSubmitted = false;
+    let currentSessionId = 'SESSION_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    let waktuMulai = new Date().toLocaleString();
+
+    let simulationResult = {
+        kecerdasan: { userAns: {}, benar: 0, skor: 0 }
+    };
+
+    function makeFigSvg(content, size=55) {
+        return `<svg width="${size}" height="${size}" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle; background:#fff; border:1px solid #cbd5e1; border-radius:6px; padding:3px;">
+            ${content}
+        </svg>`;
+    }
+
+    // 50 SOAL BARU EDISI KETIGA (ULTIMATE DIFFICULTY - 100% BERBEDA DARI SEBELUMNYA)
+    const rawKecerdasan = [
+        {
+            type: "1", title: "Deret Rotasi Heliks Ganda & Sumbu Silang",
+            q: "Tentukan gambar selanjutnya dari deret bangun oktagon luar dengan rotasi 45° searah jarum jam dan pergerakan titik silang ganda berlawanan arah!",
+            media: `<div style="display:flex; justify-content:center; align-items:center; gap:8px;">
+                ${makeFigSvg('<polygon points="30,15 70,15 85,30 85,70 70,85 30,85 15,70 15,30" fill="none" stroke="#0b2340" stroke-width="3"/><circle cx="50" cy="30" r="5" fill="#0b2340"/><circle cx="50" cy="70" r="5" fill="none" stroke="#0b2340" stroke-width="2"/>', 70)}
+                ${makeFigSvg('<polygon points="30,15 70,15 85,30 85,70 70,85 30,85 15,70 15,30" fill="none" stroke="#0b2340" stroke-width="3" transform="rotate(45 50 50)"/><circle cx="70" cy="50" r="5" fill="#0b2340"/><circle cx="30" cy="50" r="5" fill="none" stroke="#0b2340" stroke-width="2"/>', 70)}
+                ${makeFigSvg('<polygon points="30,15 70,15 85,30 85,70 70,85 30,85 15,70 15,30" fill="none" stroke="#0b2340" stroke-width="3" transform="rotate(90 50 50)"/><circle cx="50" cy="70" r="5" fill="#0b2340"/><circle cx="50" cy="30" r="5" fill="none" stroke="#0b2340" stroke-width="2"/>', 70)}
+                <span style="font-size:24px; font-weight:bold; color:#c0392b;">?</span>
+            </div>`,
+            opts: [
+                makeFigSvg('<polygon points="30,15 70,15 85,30 85,70 70,85 30,85 15,70 15,30" fill="none" stroke="#0b2340" stroke-width="3" transform="rotate(135 50 50)"/><circle cx="30" cy="50" r="5" fill="#0b2340"/><circle cx="70" cy="50" r="5" fill="none" stroke="#0b2340" stroke-width="2"/>'),
+                makeFigSvg('<polygon points="30,15 70,15 85,30 85,70 70,85 30,85 15,70 15,30" fill="none" stroke="#0b2340" stroke-width="3" transform="rotate(135 50 50)"/><circle cx="50" cy="30" r="5" fill="#0b2340"/><circle cx="50" cy="70" r="5" fill="none" stroke="#0b2340" stroke-width="2"/>'),
+                makeFigSvg('<polygon points="30,15 70,15 85,30 85,70 70,85 30,85 15,70 15,30" fill="none" stroke="#0b2340" stroke-width="3" transform="rotate(135 50 50)"/><circle cx="70" cy="50" r="5" fill="#0b2340"/><circle cx="30" cy="50" r="5" fill="none" stroke="#0b2340" stroke-width="2"/>'),
+                makeFigSvg('<polygon points="30,15 70,15 85,30 85,70 70,85 30,85 15,70 15,30" fill="none" stroke="#0b2340" stroke-width="3" transform="rotate(135 50 50)"/><circle cx="50" cy="50" r="8" fill="#0b2340"/>'),
+                makeFigSvg('<polygon points="30,15 70,15 85,30 85,70 70,85 30,85 15,70 15,30" fill="none" stroke="#0b2340" stroke-width="3" transform="rotate(135 50 50)"/><circle cx="30" cy="30" r="5" fill="#0b2340"/>')
+            ],
+            ans: 0, exp: "Oktagon luar berotasi 45° bertahap, dan dua titik penanda bertukar posisi serta berotasi 90° berlawanan arah."
+        },
+        {
+            type: "2", title: "Matriks 3x3 Logika Penggabungan Irisan Sektoral",
+            q: "Tentukan elemen sel kanan bawah pada matriks 3x3 yang mengatur kombinasi arsiran juring lingkaran dan garis diagonal!",
+            media: `<div style="display:flex; justify-content:center; align-items:center; gap:6px;">
+                ${makeFigSvg('<circle cx="50" cy="50" r="28" fill="none" stroke="#0b2340" stroke-width="2"/><path d="M 50 50 L 50 22 A 28 28 0 0 1 78 50 Z" fill="#0b2340"/>', 65)}
+                ${makeFigSvg('<circle cx="50" cy="50" r="28" fill="none" stroke="#0b2340" stroke-width="2"/><path d="M 50 50 L 78 50 A 28 28 0 0 1 50 78 Z" fill="#0b2340"/>', 65)}
+                ${makeFigSvg('<circle cx="50" cy="50" r="28" fill="none" stroke="#0b2340" stroke-width="2"/><path d="M 50 50 L 50 22 A 28 28 0 0 1 78 50 Z" fill="#0b2340"/><path d="M 50 50 L 78 50 A 28 28 0 0 1 50 78 Z" fill="#0b2340"/>', 65)}
+                <span style="font-size:20px; font-weight:bold; color:#c0392b;">?</span>
+            </div>`,
+            opts: [
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="none" stroke="#0b2340" stroke-width="2"/><path d="M 50 50 L 50 22 A 28 28 0 0 1 78 50 Z" fill="#0b2340"/><path d="M 50 50 L 78 50 A 28 28 0 0 1 50 78 Z" fill="#0b2340"/><path d="M 50 50 L 22 50 A 28 28 0 0 1 50 22 Z" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="none" stroke="#0b2340" stroke-width="5"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
+                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>')
+            ],
+            ans: 0, exp: "Baris ketiga merupakan hasil operasi penggabungan (OR) juring arsiran hitam dari kolom pertama dan kedua."
+        },
+        {
+            type: "3", title: "Analogi Transformasi Geometris Berporsen Ganda",
+            q: "Tentukan pasangan analogi yang tepat untuk transformasi bentuk poligon berpusat lingkaran ganda!",
+            media: `<div style="display:flex; justify-content:center; align-items:center; gap:8px;">
+                ${makeFigSvg('<polygon points="50,15 85,85 15,85" fill="none" stroke="#0b2340" stroke-width="2"/><circle cx="50" cy="55" r="15" fill="#0b2340"/>', 65)}
+                <span style="font-size:18px; font-weight:bold;">→</span>
+                ${makeFigSvg('<polygon points="50,15 85,85 15,85" fill="none" stroke="#0b2340" stroke-width="5"/><circle cx="50" cy="55" r="22" fill="none" stroke="#0b2340" stroke-width="3"/>', 65)}
+                <span style="font-size:18px; font-weight:bold;">::</span>
+                ${makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="2"/><circle cx="50" cy="50" r="15" fill="#0b2340"/>', 65)}
+                <span style="font-size:18px; font-weight:bold;">→</span>
+                <span style="font-size:24px; font-weight:bold; color:#c0392b;">?</span>
+            </div>`,
+            opts: [
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="5"/><circle cx="50" cy="50" r="22" fill="none" stroke="#0b2340" stroke-width="3"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="2"/><circle cx="50" cy="50" r="15" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
+                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>'),
+                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
+            ],
+            ans: 0, exp: "Ketebalan bingkai luar meningkat dari 2 ke 5, dan lingkaran padat di dalam berubah menjadi lingkaran berongga lebih besar."
+        },
+        {
+            type: "4", title: "Deret Reduksi Poligon Konsentris Bertingkat",
+            q: "Tentukan bentuk selanjutnya dalam deret pengurangan jumlah sisi poligon luar dari segi-6 ke segi-3 disertai perubahan elemen tengah!",
+            media: `<div style="display:flex; justify-content:center; align-items:center; gap:8px;">
+                ${makeFigSvg('<polygon points="50,15 80,30 80,70 50,85 20,70 20,30" fill="none" stroke="#0b2340" stroke-width="3"/><circle cx="50" cy="50" r="8" fill="#0b2340"/>', 70)}
+                ${makeFigSvg('<polygon points="50,15 85,50 50,85 15,50" fill="none" stroke="#0b2340" stroke-width="3"/><rect x="42" y="42" width="16" height="16" fill="none" stroke="#0b2340" stroke-width="2"/>', 70)}
+                ${makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="3"/><polygon points="50,30 70,70 30,70" fill="none" stroke="#0b2340" stroke-width="2"/>', 70)}
+                <span style="font-size:24px; font-weight:bold; color:#c0392b;">?</span>
+            </div>`,
+            opts: [
+                makeFigSvg('<polygon points="50,20 80,75 20,75" fill="none" stroke="#0b2340" stroke-width="3"/><circle cx="50" cy="55" r="10" fill="#0b2340"/>'),
+                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
+                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
+            ],
+            ans: 0, exp: "Jumlah sisi poligon luar berkurang konsisten (6 -> 5 -> 4 -> 3), dan bentuk tengah berselang-seling kembali ke lingkaran padat."
+        },
+        {
+            type: "5", title: "Siklus Rotasi Objek Majemuk Berkelanjutan",
+            q: "Tentukan gambar selanjutnya dalam siklus pergerakan bintang kecil di dalam bingkai segitiga yang berotasi 120° searah jarum jam!",
+            media: `<div style="display:flex; justify-content:center; align-items:center; gap:8px;">
+                ${makeFigSvg('<polygon points="50,15 85,85 15,85" fill="none" stroke="#0b2340" stroke-width="3"/><polygon points="50,35 55,45 65,48 57,55 59,65 50,60 41,65 43,55 35,48 45,45" fill="#0b2340"/>', 70)}
+                ${makeFigSvg('<polygon points="50,15 85,85 15,85" fill="none" stroke="#0b2340" stroke-width="3" transform="rotate(120 50 50)"/><polygon points="50,35 55,45 65,48 57,55 59,65 50,60 41,65 43,55 35,48 45,45" fill="#0b2340" transform="rotate(120 50 50)"/>', 70)}
+                <span style="font-size:24px; font-weight:bold; color:#c0392b;">?</span>
+            </div>`,
+            opts: [
+                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="none" stroke="#0b2340" stroke-width="3" transform="rotate(240 50 50)"/><polygon points="50,35 55,45 65,48 57,55 59,65 50,60 41,65 43,55 35,48 45,45" fill="#0b2340" transform="rotate(240 50 50)"/>'),
+                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="none" stroke="#0b2340" stroke-width="3"/><polygon points="50,35 55,45 65,48 57,55 59,65 50,60 41,65 43,55 35,48 45,45" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
+                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
+            ],
+            ans: 0, exp: "Rotasi kelanjutan sebesar 120° akumulatif searah jarum jam menghasilkan orientasi sudut pada posisi ketiga."
+        },
+        {
+            type: "6", title: "Transformasi Simultan Skala & Jaringan Titik",
+            q: "Tentukan hasil transformasi perkecilan skala bingkai luar disertai penambahan titik simpul pada koordinat diagonal matriks!",
+            media: `<div style="display:flex; justify-content:center; align-items:center;">
+                ${makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="2"/><circle cx="50" cy="50" r="6" fill="#0b2340"/>', 75)}
+            </div>`,
+            opts: [
+                makeFigSvg('<rect x="32" y="32" width="36" height="36" fill="none" stroke="#0b2340" stroke-width="2"/><circle cx="32" cy="32" r="4" fill="#0b2340"/><circle cx="68" cy="32" r="4" fill="#0b2340"/><circle cx="32" cy="68" r="4" fill="#0b2340"/><circle cx="68" cy="68" r="4" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="2"/><circle cx="50" cy="50" r="6" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
+                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>'),
+                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
+            ],
+            ans: 0, exp: "Bingkai persegi mengecil menjadi 36x36 dan memunculkan empat titik simpul pada sudut diagonalnya."
+        },
+        {
+            type: "7", title: "Refleksi Ganda Sumbu Silang Diagonal",
+            q: "Manakah gambar yang merupakan hasil pencerminan sempurna terhadap sumbu diagonal silang (X utama dan sekunder sekaligus)?",
+            media: `<div style="display:flex; justify-content:center; align-items:center;">
+                ${makeFigSvg('<path d="M 30 30 L 70 30 L 50 70 Z" fill="#0b2340"/>', 75)}
+            </div>`,
+            opts: [
+                makeFigSvg('<path d="M 30 70 L 70 70 L 50 30 Z" fill="#0b2340"/>'),
+                makeFigSvg('<path d="M 30 30 L 70 30 L 50 70 Z" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
+                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
+            ],
+            ans: 0, exp: "Pencerminan silang diagonal merefleksikan posisi puncak segitiga secara vertikal ke bagian bawah."
+        },
+        {
+            type: "8", title: "Operasi Logika XOR Elemen Batas & Garis Tengah",
+            q: "Tentukan hasil operasi logika XOR antara bingkai lingkaran luar dan garis salib vertikal-horizontal di dalamnya!",
+            media: `<div style="display:flex; justify-content:center; align-items:center; gap:8px;">
+                ${makeFigSvg('<circle cx="50" cy="50" r="30" fill="none" stroke="#0b2340" stroke-width="3"/><line x1="20" y1="50" x2="80" y2="50" stroke="#0b2340" stroke-width="2"/><line x1="50" y1="20" x2="50" y2="80" stroke="#0b2340" stroke-width="2"/>', 70)}
+                <span style="font-size:20px; font-weight:bold;">−</span>
+                ${makeFigSvg('<line x1="20" y1="50" x2="80" y2="50" stroke="#0b2340" stroke-width="2"/>', 70)}
+                <span style="font-size:24px; font-weight:bold; color:#c0392b;">?</span>
+            </div>`,
+            opts: [
+                makeFigSvg('<circle cx="50" cy="50" r="30" fill="none" stroke="#0b2340" stroke-width="3"/><line x1="50" y1="20" x2="50" y2="80" stroke="#0b2340" stroke-width="2"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="30" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
+                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>'),
+                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
+            ],
+            ans: 0, exp: "Operasi pengeluaran (XOR) menghilangkan garis horizontal dan mempertahankan lingkaran serta garis vertikal."
+        },
+        {
+            type: "9", title: "Matriks 3x3 Pergerakan Kuadran Titik Hitam Berputar",
+            q: "Selesaikan sel kosong pada matriks 3x3 yang mengatur rotasi titik hitam mengitari empat kuadran persegi searah jarum jam!",
+            media: `<div style="display:flex; justify-content:center; align-items:center; gap:6px;">
+                ${makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="2"/><circle cx="35" cy="35" r="5" fill="#0b2340"/>', 65)}
+                ${makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="2"/><circle cx="65" cy="35" r="5" fill="#0b2340"/>', 65)}
+                ${makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="2"/><circle cx="65" cy="65" r="5" fill="#0b2340"/>', 65)}
+                <span style="font-size:20px; font-weight:bold; color:#c0392b;">?</span>
+            </div>`,
+            opts: [
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="2"/><circle cx="35" cy="65" r="5" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="2"/><circle cx="35" cy="35" r="5" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
+                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>')
+            ],
+            ans: 0, exp: "Titik hitam berotasi dari kuadran bawah-kanan ke kuadran bawah-kiri pada sel terakhir matriks."
+        },
+        {
+            type: "10", title: "Transformasi Peningkatan Kerumitan Garis Serentak",
+            q: "Tentukan bentuk kelanjutan dari transformasi geometri yang melipatgandakan jumlah garis internal secara eksponensial!",
+            media: `<div style="display:flex; justify-content:center; align-items:center; gap:8px;">
+                ${makeFigSvg('<circle cx="50" cy="50" r="28" fill="none" stroke="#0b2340" stroke-width="2"/><line x1="22" y1="50" x2="78" y2="50" stroke="#0b2340" stroke-width="2"/>', 70)}
+                <span style="font-size:18px; font-weight:bold;">→</span>
+                ${makeFigSvg('<circle cx="50" cy="50" r="28" fill="none" stroke="#0b2340" stroke-width="2"/><line x1="22" y1="50" x2="78" y2="50" stroke="#0b2340" stroke-width="2"/><line x1="50" y1="22" x2="50" y2="78" stroke="#0b2340" stroke-width="2"/>', 70)}
+                <span style="font-size:24px; font-weight:bold; color:#c0392b;">?</span>
+            </div>`,
+            opts: [
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="none" stroke="#0b2340" stroke-width="2"/><line x1="22" y1="50" x2="78" y2="50" stroke="#0b2340" stroke-width="2"/><line x1="50" y1="22" x2="50" y2="78" stroke="#0b2340" stroke-width="2"/><line x1="30" y1="30" x2="70" y2="70" stroke="#0b2340" stroke-width="2"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
+                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>'),
+                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
+            ],
+            ans: 0, exp: "Penambahan satu garis diagonal baru melengkapi pola akumulasi garis ortogonal dan diagonal."
+        },
+        {
+            type: "11", title: "Rotasi 315° Poligon Asimetris Kompleks",
+            q: "Tentukan hasil rotasi 315 derajat searah jarum jam dari bentuk poligon asimetris berlekuk berikut!",
+            media: `<div style="display:flex; justify-content:center; align-items:center;">
+                ${makeFigSvg('<path d="M 25 25 L 75 25 L 85 75 L 50 60 L 25 75 Z" fill="#0b2340"/>', 75)}
+            </div>`,
+            opts: [
+                makeFigSvg('<path d="M 25 25 L 75 25 L 85 75 L 50 60 L 25 75 Z" transform="rotate(315 50 50)" fill="#0b2340"/>'),
+                makeFigSvg('<path d="M 25 25 L 75 25 L 85 75 L 50 60 L 25 75 Z" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
+                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
+            ],
+            ans: 0, exp: "Rotasi 315° (atau -45°) memposisikan takik lekukan poligon secara presisi ke arah sudut kanan atas."
+        },
+        {
+            type: "12", title: "Refleksi Terhadap Sumbu Miring 45°",
+            q: "Manakah gambar yang merupakan hasil pencerminan terhadap garis sumbu miring bersudut 45 derajat?",
+            media: `<div style="display:flex; justify-content:center; align-items:center;">
+                ${makeFigSvg('<polygon points="35,25 65,35 50,75" fill="#0b2340"/>', 75)}
+            </div>`,
+            opts: [
+                makeFigSvg('<polygon points="25,35 75,50 65,65" fill="#0b2340"/>'),
+                makeFigSvg('<polygon points="35,25 65,35 50,75" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
+                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>')
+            ],
+            ans: 0, exp: "Pencerminan sumbu miring 45° membalik orientasi spasial objek secara diagonal miring."
+        },
+        {
+            type: "13", title: "Translasi Vektor Kompleks Ganda Tiga Langkah",
+            q: "Tentukan hasil pergeseran (translasi) objek gabungan bentuk L sejauh tiga satuan ke kanan dan dua satuan ke atas!",
+            media: `<div style="display:flex; justify-content:center; align-items:center;">
+                ${makeFigSvg('<path d="M 20 50 L 35 50 L 35 80 L 65 80 L 65 95 L 20 95 Z" fill="#0b2340"/>', 75)}
+            </div>`,
+            opts: [
+                makeFigSvg('<path d="M 35 20 L 50 20 L 50 50 L 80 50 L 80 65 L 35 65 Z" fill="#0b2340"/>'),
+                makeFigSvg('<path d="M 20 50 L 35 50 L 35 80 L 65 80 L 65 95 L 20 95 Z" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
+                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>')
+            ],
+            ans: 0, exp: "Translasi menggeser koordinat seluruh titik bentuk L ke arah kanan atas secara proporsional."
+        },
+        {
+            type: "14", title: "Dilatasi Simetris Objek Konsentris Berlipat",
+            q: "Tentukan hasil perbesaran skala dua kali lipat dari struktur lingkaran konsentris bertitik pusat ganda!",
+            media: `<div style="display:flex; justify-content:center; align-items:center;">
+                ${makeFigSvg('<circle cx="50" cy="50" r="20" fill="none" stroke="#0b2340" stroke-width="2"/><circle cx="50" cy="50" r="10" fill="#0b2340"/>', 75)}
+            </div>`,
+            opts: [
+                makeFigSvg('<circle cx="50" cy="50" r="38" fill="none" stroke="#0b2340" stroke-width="3"/><circle cx="50" cy="50" r="20" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="20" fill="none" stroke="#0b2340" stroke-width="2"/><circle cx="50" cy="50" r="10" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
+                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>')
+            ],
+            ans: 0, exp: "Dilatasi proporsional memperbesar radius lingkaran luar menjadi 38 dan lingkaran dalam menjadi 20."
+        },
+        {
+            type: "15", title: "Transformasi Gabungan Rotasi & Inversi Warna",
+            q: "Tentukan hasil akhir dari objek segitiga sama sisi yang mengalami rotasi 180° dan pembalikan warna (inversi hitam ke putih berongga)!",
+            media: `<div style="display:flex; justify-content:center; align-items:center;">
+                ${makeFigSvg('<polygon points="50,20 80,80 20,80" fill="#0b2340"/>', 75)}
+            </div>`,
+            opts: [
+                makeFigSvg('<polygon points="50,20 80,80 20,80" fill="none" stroke="#0b2340" stroke-width="3"/>'),
+                makeFigSvg('<polygon points="50,20 80,80 20,80" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
+                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>')
+            ],
+            ans: 0, exp: "Rotasi 180° membalik puncak segitiga ke bawah dan inversi mengubahnya menjadi bentuk berongga."
+        },
+        {
+            type: "16", title: "Rotasi Kompleks Sistem Empat Panah Sudut",
+            q: "Tentukan hasil putaran 90 derajat berlawanan arah jarum jam dari sistem empat anak panah yang mengarah ke pusat!",
+            media: `<div style="display:flex; justify-content:center; align-items:center;">
+                ${makeFigSvg('<line x1="50" y1="20" x2="50" y2="50" stroke="#0b2340" stroke-width="3" marker-end="url(#arrow)"/><line x1="50" y1="80" x2="50" y2="50" stroke="#0b2340" stroke-width="3"/><line x1="20" y1="50" x2="50" y2="50" stroke="#0b2340" stroke-width="3"/><line x1="80" y1="50" x2="50" y2="50" stroke="#0b2340" stroke-width="3"/>', 75)}
+            </div>`,
+            opts: [
+                makeFigSvg('<line x1="20" y1="50" x2="50" y2="50" stroke="#0b2340" stroke-width="3"/><line x1="80" y1="50" x2="50" y2="50" stroke="#0b2340" stroke-width="3"/><line x1="50" y1="20" x2="50" y2="50" stroke="#0b2340" stroke-width="3"/><line x1="50" y1="80" x2="50" y2="50" stroke="#0b2340" stroke-width="3"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
+                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>'),
+                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
+            ],
+            ans: 0, exp: "Rotasi 90° CCW memutar posisi seluruh orientasi garis panah secara tegak lurus."
+        },
+        {
+            type: "17", title: "Transformasi Grid Titik Simpul Matrix 5x5",
+            q: "Tentukan hasil penambahan simpul titik diagonal penuh pada bingkai grid matriks 5x5 bersarang!",
+            media: `<div style="display:flex; justify-content:center; align-items:center;">
+                ${makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="2"/><circle cx="25" cy="25" r="4" fill="#0b2340"/><circle cx="75" cy="75" r="4" fill="#0b2340"/>', 75)}
+            </div>`,
+            opts: [
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="2"/><circle cx="25" cy="25" r="4" fill="#0b2340"/><circle cx="75" cy="25" r="4" fill="#0b2340"/><circle cx="25" cy="75" r="4" fill="#0b2340"/><circle cx="75" cy="75" r="4" fill="#0b2340"/><line x1="25" y1="25" x2="75" y2="75" stroke="#0b2340"/><line x1="75" y1="25" x2="25" y2="75" stroke="#0b2340"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
+                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>'),
+                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
+            ],
+            ans: 0, exp: "Transformasi melengkapi seluruh sudut grid menjadi 4 titik simpul dengan jaringan garis silang diagonal."
+        },
+        {
+            type: "18", title: "Pembalikan Urutan Lapisan Struktur Tiga Dimensi 2D",
+            q: "Tentukan hasil pembalikan urutan bentuk bersarang (Lingkaran di dalam Segitiga di dalam Oktagon) menjadi urutan sebaliknya!",
+            media: `<div style="display:flex; justify-content:center; align-items:center;">
+                ${makeFigSvg('<polygon points="30,15 70,15 85,30 85,70 70,85 30,85 15,70 15,30" fill="none" stroke="#0b2340" stroke-width="2"/><polygon points="50,25 80,75 20,75" fill="none" stroke="#0b2340" stroke-width="2"/><circle cx="50" cy="55" r="15" fill="none" stroke="#0b2340" stroke-width="2"/>', 75)}
+            </div>`,
+            opts: [
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="none" stroke="#0b2340" stroke-width="2"/><polygon points="50,18 82,72 18,72" fill="none" stroke="#0b2340" stroke-width="2"/><polygon points="50,22 78,38 78,62 50,78 22,62 22,38" fill="none" stroke="#0b2340" stroke-width="2"/>'),
+                makeFigSvg('<polygon points="30,15 70,15 85,30 85,70 70,85 30,85 15,70 15,30" fill="none" stroke="#0b2340" stroke-width="2"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
+                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>')
+            ],
+            ans: 0, exp: "Pembalikan urutan menempatkan lingkaran di pusat terluar, segitiga di tengah, dan oktagon di dalam."
+        },
+        {
+            type: "19", title: "Operasi Logika Irisan Eksklusif Majemuk",
+            q: "Tentukan hasil operasi logika XOR antara bentuk segitiga dan lingkaran yang saling beririsan simetris!",
+            media: `<div style="display:flex; justify-content:center; align-items:center;">
+                ${makeFigSvg('<polygon points="50,20 80,80 20,80" fill="none" stroke="#0b2340" stroke-width="2"/><circle cx="50" cy="60" r="22" fill="none" stroke="#0b2340" stroke-width="2"/>', 75)}
+            </div>`,
+            opts: [
+                makeFigSvg('<path d="M 50 20 L 80 80 L 20 80 Z" fill="none" stroke="#0b2340" stroke-width="2"/><path d="M 50 38 A 22 22 0 0 1 72 65 L 28 65 A 22 22 0 0 1 50 38" fill="none" stroke="#0b2340" stroke-width="2"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
+                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>'),
+                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
+            ],
+            ans: 0, exp: "Operasi XOR mempertahankan batas luar kedua bentuk dan mengeliminasi irisan perpotongan tengah."
+        },
+        {
+            type: "20", title: "Perakitan Pecahan Poligon Bintang Sembilan",
+            q: "Tentukan bentuk utuh hasil penggabungan potongan segmen juring poligon bintang bersudut sembilan!",
+            media: `<div style="display:flex; justify-content:center; align-items:center;">
+                ${makeFigSvg('<polygon points="50,15 58,35 78,38 63,52 68,75 50,60 32,75 37,52 22,38 42,35" fill="none" stroke="#0b2340" stroke-width="2" stroke-dasharray="2"/>', 75)}
+            </div>`,
+            opts: [
+                makeFigSvg('<polygon points="50,15 58,35 78,38 63,52 68,75 50,60 32,75 37,52 22,38 42,35" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
+                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>'),
+                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
+            ],
+            ans: 0, exp: "Potongan pecahan tersusun menyatu membentuk bidang bintang bersudut sembilan padat."
+        },
+        {
+            type: "21", title: "Pengurangan Irisan Bidang Kompleks Tiga Lapis",
+            q: "Tentukan sisa bidang setelah sebuah lingkaran besar dikurangkan dengan dua buah persegi di dalamnya!",
+            media: `<div style="display:flex; justify-content:center; align-items:center; gap:8px;">
+                ${makeFigSvg('<circle cx="50" cy="50" r="32" fill="none" stroke="#0b2340" stroke-width="2"/><rect x="35" y="35" width="30" height="30" fill="#0b2340"/>', 70)}
+                <span style="font-size:20px; font-weight:bold;">−</span>
+                ${makeFigSvg('<rect x="35" y="35" width="30" height="30" fill="#0b2340"/>', 70)}
+                <span style="font-size:24px; font-weight:bold; color:#c0392b;">?</span>
+            </div>`,
+            opts: [
+                makeFigSvg('<circle cx="50" cy="50" r="32" fill="none" stroke="#0b2340" stroke-width="2"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
+                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>'),
+                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
+            ],
+            ans: 0, exp: "Pengurangan elemen persegi di tengah menyisakan bingkai lingkaran luar secara bersih."
+        },
+        {
+            type: "22", title: "Irisan Universal Empat Bangun Geometri Silang",
+            q: "Tentukan bentuk area perpotongan bersama (irisan universal) dari lingkaran, bujur sangkar, segitiga, dan heksagon!",
+            media: `<div style="display:flex; justify-content:center; align-items:center;">
+                ${makeFigSvg('<circle cx="50" cy="50" r="24" fill="none" stroke="#0b2340" stroke-width="1.5"/><rect x="30" y="30" width="40" height="40" fill="none" stroke="#0b2340" stroke-width="1.5"/><polygon points="50,20 80,75 20,75" fill="none" stroke="#0b2340" stroke-width="1.5"/>', 75)}
+            </div>`,
+            opts: [
+                makeFigSvg('<polygon points="45,45 55,45 50,58 Z" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="15" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="40" y="40" width="20" height="20" fill="#0b2340"/>'),
+                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>'),
+                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
+            ],
+            ans: 0, exp: "Irisan universal dari keempat bangun tersebut membentuk bidang segitiga kecil di titik pusat."
+        },
+        {
+            type: "23", title: "De-komposisi Kubus Proyeksi Isometrik",
+            q: "Pilih komponen pecahan bidang jaring-jaring yang menyusun struktur kubus isometrik tiga dimensi!",
+            media: `<div style="display:flex; justify-content:center; align-items:center;">
+                ${makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="2" stroke-dasharray="3"/><line x1="25" y1="50" x2="75" y2="50" stroke="#0b2340"/>', 75)}
+            </div>`,
+            opts: [
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="2"/>'),
+                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>'),
+                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
+            ],
+            ans: 0, exp: "Komponen pecahan bidang persegi tersusun membentuk geometri kubus padat penuh."
+        },
+        {
+            type: "24", title: "Perakitan Poligon Belah Ketupat Ganda",
+            q: "Tentukan bentuk hasil perakitan dari delapan buah potongan segitiga siku-siku yang mengelilingi titik pusat!",
+            media: `<div style="display:flex; justify-content:center; align-items:center;">
+                ${makeFigSvg('<polygon points="50,20 80,50 50,80 20,50" fill="none" stroke="#0b2340" stroke-width="2" stroke-dasharray="2"/>', 75)}
+            </div>`,
+            opts: [
+                makeFigSvg('<polygon points="50,15 85,50 50,85 15,50" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
+                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>'),
+                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
+            ],
+            ans: 0, exp: "Delapan potongan segitiga dirakit menyatu membentuk bidang segi delapan beraturan padat."
+        },
+        {
+            type: "25", title: "Pencocokan Siluet Rongga Kompleks Tiga Sudut",
+            q: "Pilih potongan bentuk yang memiliki lekukan sudut ganda untuk mengisi rongga pada siluet target asimetris!",
+            media: `<div style="display:flex; justify-content:center; align-items:center;">
+                ${makeFigSvg('<path d="M 25 25 L 75 25 L 75 75 L 50 75 L 50 50 L 25 50 Z" fill="none" stroke="#0b2340" stroke-width="3" stroke-dasharray="3"/><rect x="25" y="50" width="25" height="25" fill="#c0392b"/>', 75)}
+            </div>`,
+            opts: [
+                makeFigSvg('<rect x="35" y="35" width="25" height="25" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
+                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>'),
+                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
+            ],
+            ans: 0, exp: "Potongan balok berdimensi 25x25 pas untuk mengisi rongga siku bawah target."
+        },
+        {
+            type: "26", title: "Penyelesaian Sektor Simetri Radial Enam Arah",
+            q: "Tentukan segmen garis yang hilang untuk melengkapi pola simetri radial enam arah pada lingkaran!",
+            media: `<div style="display:flex; justify-content:center; align-items:center;">
+                ${makeFigSvg('<circle cx="50" cy="50" r="30" fill="none" stroke="#0b2340" stroke-width="3"/><line x1="50" y1="20" x2="50" y2="80" stroke="#0b2340" stroke-width="2"/><line x1="25" y1="35" x2="75" y2="65" stroke="#0b2340" stroke-width="2"/>', 75)}
+            </div>`,
+            opts: [
+                makeFigSvg('<line x1="25" y1="65" x2="75" y2="35" stroke="#0b2340" stroke-width="2"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="5" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
+                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>'),
+                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
+            ],
+            ans: 0, exp: "Segmen garis diagonal kedua melengkapi pola simetri radial bintang 6 secara sempurna."
+        },
+        {
+            type: "27", title: "Pola Sambungan Kurva Spiral Logaritmik",
+            q: "Tentukan sambungan kurva spiral yang tepat untuk melengkapi pola pusaran melingkar tertutup!",
+            media: `<div style="display:flex; justify-content:center; align-items:center;">
+                ${makeFigSvg('<path d="M 50 50 A 20 20 0 0 1 70 50 A 30 30 0 0 1 40 80" fill="none" stroke="#0b2340" stroke-width="3"/>', 75)}
+            </div>`,
+            opts: [
+                makeFigSvg('<path d="M 40 80 A 30 30 0 0 1 20 50 A 20 20 0 0 1 50 50" fill="none" stroke="#0b2340" stroke-width="3"/>'),
+                makeFigSvg('<line x1="20" y1="50" x2="80" y2="50" stroke="#0b2340" stroke-width="3"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
+                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>')
+            ],
+            ans: 0, exp: "Kurva spiral sekunder melengkapi pusaran melingkar dari titik pusat secara kontinu."
+        },
+        {
+            type: "28", title: "Penghitungan Area Tertutup Grid Oktagon Bersilang",
+            q: "Tentukan jumlah total bidang tertutup yang terbentuk dari irisan dua lapis oktagon bersilang!",
+            media: `<div style="display:flex; justify-content:center; align-items:center;">
+                ${makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="2" transform="rotate(22 50 50)"/><rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="2" transform="rotate(67 50 50)"/>', 75)}
+            </div>`,
+            opts: [
+                makeFigSvg('<text x="42" y="60" font-size="24" font-weight="bold" fill="#0b2340">16</text>'),
+                makeFigSvg('<text x="42" y="60" font-size="24" font-weight="bold" fill="#0b2340">12</text>'),
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
+                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>')
+            ],
+            ans: 0, exp: "Irisan dua persegi bersilang miring menghasilkan total 16 bidang kecil tertutup."
+        },
+        {
+            type: "29", title: "Odd-one-out Anomali Ketidakberaturan Sudut Pusat",
+            q: "Pilih satu gambar yang melanggar aturan simetri sudut pusat di antara kelompok pilihan geometri berikut!",
+            media: `<div style="font-size:13px; font-weight:bold; color:#64748b; margin-bottom:5px;">Uji Anomali Sudut Pusat:</div>`,
+            opts: [
+                makeFigSvg('<circle cx="50" cy="50" r="25" fill="#0b2340"/><line x1="25" y1="50" x2="75" y2="50" stroke="#fff" stroke-width="2"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/><line x1="25" y1="50" x2="75" y2="50" stroke="#fff" stroke-width="2"/>'),
+                makeFigSvg('<polygon points="50,20 80,50 50,80 20,50" fill="#0b2340"/><line x1="20" y1="50" x2="80" y2="50" stroke="#fff" stroke-width="2"/>'),
+                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/><line x1="15" y1="50" x2="85" y2="50" stroke="#fff" stroke-width="2"/>'),
+                makeFigSvg('<path d="M 25 30 L 75 30 L 80 70 L 20 70 Z" fill="#0b2340"/><line x1="20" y1="40" x2="80" y2="50" stroke="#c0392b" stroke-width="2"/>')
+            ],
+            ans: 4, exp: "Opsi E memiliki garis pembelah tidak simetris terhadap pusat, sedangkan A-D simetris sempurna."
+        },
+        {
+            type: "30", title: "Klasifikasi Topologi Tiga Lubang (Genus 3)",
+            q: "Pilih gambar yang memiliki karakteristik topologi tiga lubang interior terpisah (genus 3)!",
+            media: `<div style="font-size:13px; font-weight:bold; color:#64748b; margin-bottom:5px;">Uji Topologi Genus 3:</div>`,
+            opts: [
+                makeFigSvg('<rect x="10" y="30" width="80" height="40" fill="none" stroke="#0b2340" stroke-width="4"/><circle cx="30" cy="50" r="8" fill="#0b2340"/><circle cx="50" cy="50" r="8" fill="#0b2340"/><circle cx="70" cy="50" r="8" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="25" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
+                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>'),
+                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
+            ],
+            ans: 0, exp: "Bingkai dengan tiga rongga lubang di dalamnya memiliki genus 3."
+        },
+        {
+            type: "31", title: "Identifikasi Rotasi Sahih Poligon Huruf T",
+            q: "Temukan gambar di antara pilihan yang merupakan bentuk rotasi sahih (tanpa cermin) dari bentuk huruf T acuan!",
+            media: `<div style="display:flex; justify-content:center; align-items:center;">
+                ${makeFigSvg('<path d="M 25 30 L 75 30 L 75 45 L 57 45 L 57 75 L 43 75 L 43 45 L 25 45 Z" fill="#0b2340"/>', 75)}
+            </div>`,
+            opts: [
+                makeFigSvg('<path d="M 30 25 L 45 25 L 45 43 L 75 43 L 75 57 L 45 57 L 45 75 L 30 75 Z" fill="#0b2340"/>'),
+                makeFigSvg('<path d="M 25 30 L 75 30 L 75 45 L 57 45 L 57 75 L 43 75 L 43 45 L 25 45 Z" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
+                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
+            ],
+            ans: 0, exp: "Opsi A adalah hasil rotasi 90° searah jarum jam dari bentuk huruf T acuan."
+        },
+        {
+            type: "32", title: "Deteksi Anomali Ketebalan Garis Ganda",
+            q: "Temukan satu gambar yang memiliki kombinasi ketebalan garis bingkai ganda berbeda dibanding empat pilihan lainnya!",
+            media: `<div style="font-size:13px; font-weight:bold; color:#64748b; margin-bottom:5px;">Deteksi Anomali Garis:</div>`,
+            opts: [
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="none" stroke="#0b2340" stroke-width="6"/><circle cx="50" cy="50" r="18" fill="none" stroke="#0b2340" stroke-width="2"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="none" stroke="#0b2340" stroke-width="2"/><circle cx="50" cy="50" r="18" fill="none" stroke="#0b2340" stroke-width="2"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="none" stroke="#0b2340" stroke-width="2"/><circle cx="50" cy="50" r="18" fill="none" stroke="#0b2340" stroke-width="2"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="none" stroke="#0b2340" stroke-width="2"/><circle cx="50" cy="50" r="18" fill="none" stroke="#0b2340" stroke-width="2"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="none" stroke="#0b2340" stroke-width="2"/><circle cx="50" cy="50" r="18" fill="none" stroke="#0b2340" stroke-width="2"/>')
+            ],
+            ans: 0, exp: "Opsi A memiliki ketebalan garis luar 6px, sedangkan opsi lain menggunakan 2px."
+        },
+        {
+            type: "33", title: "Pencarian Rasio Luas Setara 60:40",
+            q: "Pilih gambar yang memiliki rasio pembagian area hitam dan putih mendekati 60:40 secara proporsional!",
+            media: `<div style="display:flex; justify-content:center; align-items:center; gap:10px;">
+                ${makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/><path d="M 25 25 L 75 50 L 25 50 Z" fill="#fff"/>', 60)}
+            </div>`,
+            opts: [
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/><path d="M 25 25 L 60 75 L 25 75 Z" fill="#fff"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
+                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>'),
+                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
+            ],
+            ans: 0, exp: "Opsi A memotong bidang persegi dengan proporsi rasio luas area sekitar 60:40."
+        },
+        {
+            type: "34", title: "Simetri Radial Tingkat Sepuluh",
+            q: "Manakah gambar di bawah ini yang memiliki simetri radial tingkat sepuluh sempurna?",
+            media: `<div style="font-size:13px; font-weight:bold; color:#64748b; margin-bottom:5px;">Uji Simetri Radial 10:</div>`,
+            opts: [
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="none" stroke="#0b2340" stroke-width="2"/><line x1="50" y1="22" x2="50" y2="78" stroke="#0b2340" stroke-width="1.5"/><line x1="22" y1="50" x2="78" y2="50" stroke="#0b2340" stroke-width="1.5"/><line x1="32" y1="32" x2="68" y2="68" stroke="#0b2340" stroke-width="1.5"/><line x1="68" y1="32" x2="32" y2="68" stroke="#0b2340" stroke-width="1.5"/><line x1="20" y1="38" x2="80" y2="62" stroke="#0b2340" stroke-width="1.5"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="3"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="none" stroke="#0b2340" stroke-width="3"/>'),
+                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="none" stroke="#0b2340" stroke-width="3"/>'),
+                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
+            ],
+            ans: 0, exp: "Lingkaran dengan 5 garis diameter bersilang membentuk simetri radial tingkat 10 sempurna."
+        },
+        {
+            type: "35", title: "Invariansi Topologi Simpul Cincin Borromean",
+            q: "Manakah bentuk yang setara secara topologi dengan struktur tiga cincin terikat borromean!",
+            media: `<div style="display:flex; justify-content:center; align-items:center;">
+                ${makeFigSvg('<circle cx="40" cy="40" r="20" fill="none" stroke="#0b2340" stroke-width="3"/><circle cx="60" cy="40" r="20" fill="none" stroke="#0b2340" stroke-width="3"/><circle cx="50" cy="65" r="20" fill="none" stroke="#0b2340" stroke-width="3"/>', 75)}
+            </div>`,
+            opts: [
+                makeFigSvg('<circle cx="40" cy="40" r="20" fill="none" stroke="#0b2340" stroke-width="3"/><circle cx="60" cy="40" r="20" fill="none" stroke="#0b2340" stroke-width="3"/><circle cx="50" cy="65" r="20" fill="none" stroke="#0b2340" stroke-width="3"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="25" fill="none" stroke="#0b2340" stroke-width="3"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="3"/>'),
+                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="none" stroke="#0b2340" stroke-width="3"/>'),
+                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
+            ],
+            ans: 0, exp: "Tiga cincin saling mengait membentuk struktur topologi borromean."
+        },
+        {
+            type: "36", title: "Analisis Sudut Kritis Segi Lima Beraturan",
+            q: "Pilih bentuk poligon yang memiliki besar sudut dalam tepat 108 derajat pada setiap simpulnya!",
+            media: `<div style="font-size:13px; font-weight:bold; color:#64748b; margin-bottom:5px;">Uji Sudut Segi-5:</div>`,
+            opts: [
+                makeFigSvg('<polygon points="50,15 85,40 70,80 30,80 15,40" fill="none" stroke="#0b2340" stroke-width="3"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="3"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="none" stroke="#0b2340" stroke-width="3"/>'),
+                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="none" stroke="#0b2340" stroke-width="3"/>'),
+                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
+            ],
+            ans: 0, exp: "Segi lima beraturan (pentagon) memiliki sudut dalam sebesar 108 derajat."
+        },
+        {
+            type: "37", title: "Proyeksi Ortogonal 3D ke 2D Sisi Depan (Front-View)",
+            q: "Tentukan hasil proyeksi tampak depan (front-view) dari objek tangga tiga tingkat berdimensi 3D!",
+            media: `<div style="display:flex; justify-content:center; align-items:center;">
+                ${makeFigSvg('<path d="M 20 80 L 40 80 L 40 60 L 60 60 L 60 40 L 80 40 L 80 80 Z" fill="none" stroke="#0b2340" stroke-width="2"/>', 75)}
+            </div>`,
+            opts: [
+                makeFigSvg('<path d="M 20 80 L 40 80 L 40 60 L 60 60 L 60 40 L 80 40 L 80 80 Z" fill="none" stroke="#0b2340" stroke-width="2"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="25" fill="none" stroke="#0b2340" stroke-width="2"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="none" stroke="#0b2340" stroke-width="3"/>'),
+                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="none" stroke="#0b2340" stroke-width="3"/>'),
+                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
+            ],
+            ans: 0, exp: "Tampak depan objek tangga menampilkan profil undakan berjenjang tiga tingkat."
+        },
+        {
+            type: "38", title: "Jaring-jaring Tabung Tutup Sempurna",
+            q: "Manakah susunan jaring-jaring bangun ruang tabung tertutup yang memiliki dua buah lingkaran alas dan selimut persegi panjang?",
+            media: `<div style="display:flex; justify-content:center; align-items:center;">
+                ${makeFigSvg('<circle cx="20" cy="50" r="15" fill="none" stroke="#0b2340" stroke-width="2"/><rect x="35" y="30" width="30" height="40" fill="none" stroke="#0b2340" stroke-width="2"/><circle cx="80" cy="50" r="15" fill="none" stroke="#0b2340" stroke-width="2"/>', 75)}
+            </div>`,
+            opts: [
+                makeFigSvg('<circle cx="20" cy="50" r="15" fill="none" stroke="#0b2340" stroke-width="2"/><rect x="35" y="30" width="30" height="40" fill="none" stroke="#0b2340" stroke-width="2"/><circle cx="80" cy="50" r="15" fill="none" stroke="#0b2340" stroke-width="2"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
+                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>'),
+                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
+            ],
+            ans: 0, exp: "Jaring-jaring tabung terdiri dari selimut persegi panjang diapit dua lingkaran sisi."
+        },
+        {
+            type: "39", title: "Visualisasi Mental Rotasi 3D Sumbu Z",
+            q: "Tentukan bentuk hasil putaran 180 derajat terhadap sumbu tegak lurus bidang (sumbu Z) dari struktur objek panah ganda!",
+            media: `<div style="display:flex; justify-content:center; align-items:center;">
+                ${makeFigSvg('<polygon points="50,20 70,50 50,40 30,50" fill="#0b2340"/>', 75)}
+            </div>`,
+            opts: [
+                makeFigSvg('<polygon points="50,80 70,50 50,60 30,50" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
+                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>'),
+                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
+            ],
+            ans: 0, exp: "Rotasi 180° pada bidang 2D membalik orientasi panah dari menghadap ke atas menjadi ke bawah."
+        },
+        {
+            type: "40", title: "Penentuan Irisan Penampang Bidang Hiperbolis",
+            q: "Tentukan bentuk bangun 2D hasil irisan bidang datar vertikal melalui dua selimut kerucut yang saling berhadapan (hiperbola)!",
+            media: `<div style="font-size:13px; font-weight:bold; color:#64748b; margin-bottom:5px;">Penampang Hiperbola:</div>`,
+            opts: [
+                makeFigSvg('<path d="M 35 20 Q 50 45 35 80" fill="none" stroke="#0b2340" stroke-width="3"/><path d="M 65 20 Q 50 45 65 80" fill="none" stroke="#0b2340" stroke-width="3"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="25" fill="none" stroke="#0b2340" stroke-width="3"/>'),
+                makeFigSvg('<ellipse cx="50" cy="50" rx="30" ry="18" fill="none" stroke="#0b2340" stroke-width="3"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="3"/>'),
+                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
+            ],
+            ans: 0, exp: "Irisan vertikal pada kerucut ganda menghasilkan kurva cabang hiperbola."
+        },
+        {
+            type: "41", title: "Jaring-Jaring Kubus: Identifikasi Sisi Berlawanan",
+            q: "Enam sisi kubus ditunjukkan sebagai jaring-jaring. Pilih susunan sisi yang dapat dilipat menjadi kubus tanpa bertumpuk.",
+            media: `<div style="font-weight:bold;color:#64748b">Pilih jaring-jaring kubus yang valid</div>`,
+            opts: [
+                makeFigSvg('<path d="M20 35h20v-20h20v20h20v20H60v20H40V55H20z" fill="none" stroke="#0b2340" stroke-width="3"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="3"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="none" stroke="#0b2340" stroke-width="3"/>'),
+                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="none" stroke="#0b2340" stroke-width="3"/>'),
+                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
+            ], ans: 0, exp: "Jaring-jaring berbentuk rangkaian enam persegi yang tersambung pada sisi-sisinya dapat dilipat menjadi kubus."
+        },
+        {
+            type: "42", title: "Rotasi Dua Simbol pada Grid",
+            q: "Kedua simbol bergeser satu posisi searah jarum jam pada grid 2×2 setiap langkah. Pilih posisi langkah berikutnya.",
+            media: `<div style="display:flex;justify-content:center;gap:8px">${makeFigSvg('<rect x="20" y="20" width="60" height="60" fill="none" stroke="#0b2340"/><circle cx="35" cy="35" r="6" fill="#0b2340"/><path d="M60 30l10 10-10 10-10-10z" fill="#c0392b"/>',70)} <b style="font-size:24px">→ ?</b></div>`,
+            opts: [
+                makeFigSvg('<rect x="20" y="20" width="60" height="60" fill="none" stroke="#0b2340"/><circle cx="65" cy="35" r="6" fill="#0b2340"/><path d="M60 60l10 10-10 10-10-10z" fill="#c0392b"/>'),
+                makeFigSvg('<rect x="20" y="20" width="60" height="60" fill="none" stroke="#0b2340"/><circle cx="35" cy="35" r="6" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="none" stroke="#0b2340" stroke-width="3"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
+                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>')
+            ], ans: 0, exp: "Simbol hitam bergerak ke kanan atas dan simbol merah bergerak ke kanan bawah sesuai rotasi posisi yang ditunjukkan."
+        },
+        {
+            type: "43", title: "Matriks Pergantian Isi dan Bingkai",
+            q: "Pola bergantian: isi bangun menjadi kosong, sementara bingkai luar bertambah satu sisi. Pilih hasil berikutnya.",
+            media: `<div style="display:flex;justify-content:center;gap:8px">${makeFigSvg('<polygon points="50,18 80,40 68,75 32,75 20,40" fill="#0b2340"/>',65)} <b>→</b> ${makeFigSvg('<polygon points="50,18 80,40 68,75 32,75 20,40" fill="none" stroke="#0b2340" stroke-width="3"/>',65)} <b>→ ?</b></div>`,
+            opts: [
+                makeFigSvg('<polygon points="50,15 78,30 85,60 65,82 35,82 15,60 22,30" fill="none" stroke="#0b2340" stroke-width="3"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
+                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>'),
+                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
+            ], ans: 0, exp: "Bangun menjadi bingkai kosong dan jumlah sisi bertambah dari lima menjadi enam."
+        },
+        {
+            type: "44", title: "Pencerminan Simbol Asimetris",
+            q: "Pilih hasil pencerminan horizontal dari simbol asimetris berikut.",
+            media: `<div style="display:flex;justify-content:center">${makeFigSvg('<path d="M25 25 L70 25 L70 40 L45 40 L45 75 L25 75 Z" fill="#0b2340"/>',75)}</div>`,
+            opts: [
+                makeFigSvg('<path d="M75 25 L30 25 L30 40 L55 40 L55 75 L75 75 Z" fill="#0b2340"/>'),
+                makeFigSvg('<path d="M25 25 L70 25 L70 40 L45 40 L45 75 L25 75 Z" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
+                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>')
+            ], ans: 0, exp: "Pencerminan horizontal menukar sisi kiri dan kanan tanpa mengubah ukuran atau orientasi vertikal."
+        },
+        {
+            type: "45", title: "Urutan Poligon dan Titik Pusat",
+            q: "Jumlah sisi bertambah dua setiap langkah, sementara titik pusat tetap. Pilih bentuk lanjutan setelah segi-4 dan segi-6.",
+            media: `<div style="display:flex;justify-content:center;gap:8px">${makeFigSvg('<rect x="28" y="28" width="44" height="44" fill="none" stroke="#0b2340" stroke-width="3"/><circle cx="50" cy="50" r="5" fill="#0b2340"/>',65)} ${makeFigSvg('<polygon points="50,20 76,35 76,65 50,80 24,65 24,35" fill="none" stroke="#0b2340" stroke-width="3"/><circle cx="50" cy="50" r="5" fill="#0b2340"/>',65)} <b>→ ?</b></div>`,
+            opts: [
+                makeFigSvg('<polygon points="50,18 75,28 82,50 75,72 50,82 25,72 18,50 25,28" fill="none" stroke="#0b2340" stroke-width="3"/><circle cx="50" cy="50" r="5" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
+                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>'),
+                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
+            ], ans: 0, exp: "Urutan sisi 4, 6, lalu 8; titik pusat dipertahankan."
+        },
+        {
+            type: "46", title: "Rotasi Panah dan Perubahan Arsiran",
+            q: "Objek diputar 90° searah jarum jam dan arsiran berpindah ke sisi yang sebelumnya berada di atas. Pilih hasilnya.",
+            media: `<div style="display:flex;justify-content:center">${makeFigSvg('<path d="M50 15 L75 45 L60 45 L60 80 L40 80 L40 45 L25 45 Z" fill="#0b2340"/><circle cx="50" cy="50" r="8" fill="#fff"/>',75)}</div>`,
+            opts: [
+                makeFigSvg('<path d="M15 50 L45 25 L45 40 L80 40 L80 60 L45 60 L45 75 Z" fill="#0b2340"/><circle cx="50" cy="50" r="8" fill="#fff"/>'),
+                makeFigSvg('<path d="M50 15 L75 45 L60 45 L60 80 L40 80 L40 45 L25 45 Z" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
+                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>')
+            ], ans: 0, exp: "Rotasi 90° searah jarum jam mengubah panah vertikal menjadi horizontal ke kanan; elemen pusat tetap."
+        },
+        {
+            type: "47", title: "Gabungan Bentuk: Selisih Geometris",
+            q: "Dari persegi berisi lingkaran, lingkaran dihilangkan. Pilih bentuk yang tersisa.",
+            media: `<div style="display:flex;justify-content:center;gap:8px">${makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="3"/><circle cx="50" cy="50" r="16" fill="#0b2340"/>',65)} <b>−</b> ${makeFigSvg('<circle cx="50" cy="50" r="16" fill="#0b2340"/>',65)} <b>→ ?</b></div>`,
+            opts: [
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="3"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
+                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>'),
+                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
+            ], ans: 0, exp: "Operasi selisih menghapus lingkaran dan mempertahankan bingkai persegi."
+        },
+        {
+            type: "48", title: "Tampak Atas Susunan Kubus",
+            q: "Susunan tiga kubus berjajar lurus dilihat dari atas. Bentuk proyeksi yang benar adalah...",
+            media: `<div style="display:flex;justify-content:center">${makeFigSvg('<rect x="15" y="35" width="23" height="30" fill="none" stroke="#0b2340" stroke-width="2"/><rect x="38" y="35" width="23" height="30" fill="none" stroke="#0b2340" stroke-width="2"/><rect x="61" y="35" width="23" height="30" fill="none" stroke="#0b2340" stroke-width="2"/>',75)}</div>`,
+            opts: [
+                makeFigSvg('<rect x="15" y="35" width="23" height="30" fill="none" stroke="#0b2340" stroke-width="2"/><rect x="38" y="35" width="23" height="30" fill="none" stroke="#0b2340" stroke-width="2"/><rect x="61" y="35" width="23" height="30" fill="none" stroke="#0b2340" stroke-width="2"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="none" stroke="#0b2340" stroke-width="2"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="none" stroke="#0b2340" stroke-width="2"/>'),
+                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="none" stroke="#0b2340" stroke-width="2"/>'),
+                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
+            ], ans: 0, exp: "Tampak atas memperlihatkan tiga bidang persegi panjang/kotak yang berjajar sesuai posisi kubus."
+        },
+        {
+            type: "49", title: "Pola Titik: Penambahan Diagonal",
+            q: "Setiap langkah menambahkan satu titik pada diagonal utama. Pilih gambar yang melanjutkan pola dari dua menjadi tiga titik.",
+            media: `<div style="display:flex;justify-content:center;gap:8px">${makeFigSvg('<rect x="20" y="20" width="60" height="60" fill="none" stroke="#0b2340"/><circle cx="30" cy="30" r="5" fill="#0b2340"/><circle cx="50" cy="50" r="5" fill="#0b2340"/>',65)} <b>→ ?</b></div>`,
+            opts: [
+                makeFigSvg('<rect x="20" y="20" width="60" height="60" fill="none" stroke="#0b2340"/><circle cx="30" cy="30" r="5" fill="#0b2340"/><circle cx="50" cy="50" r="5" fill="#0b2340"/><circle cx="70" cy="70" r="5" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="20" y="20" width="60" height="60" fill="none" stroke="#0b2340"/><circle cx="30" cy="70" r="5" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="#0b2340"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
+                makeFigSvg('<polygon points="50,15 85,85 15,85" fill="#0b2340"/>')
+            ], ans: 0, exp: "Titik ketiga ditambahkan di sudut kanan bawah agar tiga titik berada pada diagonal utama."
+        },
+        {
+            type: "50", title: "Transformasi Gabungan Final",
+            q: "Bangun diputar 180°, lalu bentuk hitam diubah menjadi bingkai kosong. Pilih hasil transformasi yang sesuai.",
+            media: `<div style="display:flex;justify-content:center">${makeFigSvg('<path d="M50 18 L80 78 L20 78 Z" fill="#0b2340"/>',75)}</div>`,
+            opts: [
+                makeFigSvg('<path d="M50 18 L80 78 L20 78 Z" fill="none" stroke="#0b2340" stroke-width="3"/>'),
+                makeFigSvg('<path d="M50 18 L80 78 L20 78 Z" fill="#0b2340"/>'),
+                makeFigSvg('<circle cx="50" cy="50" r="28" fill="none" stroke="#0b2340" stroke-width="3"/>'),
+                makeFigSvg('<rect x="25" y="25" width="50" height="50" fill="#0b2340"/>'),
+                makeFigSvg('<line x1="10" y1="50" x2="90" y2="50" stroke="#0b2340" stroke-width="3"/>')
+            ], ans: 0, exp: "Rotasi 180° membuat segitiga menghadap ke atas kembali dalam bentuk simetris; inversi mengubah bidang padat menjadi bingkai kosong."
+        }
+    ];
+
+    const TOTAL_SOAL = 50;
+    function $(id) { return document.getElementById(id); }
+    function showSection(name) {
+        ['start','kecerdasan','result','review'].forEach(x => { const el = $('sec-' + x); if (el) el.style.display = x === name ? 'block' : 'none'; });
+        window.scrollTo({top:0, behavior:'smooth'});
+    }
+    function startFullSimulation() {
+        const name = $('inputNama').value.trim();
+        if (!name) { alert('Masukkan nama lengkap peserta terlebih dahulu.'); $('inputNama').focus(); return; }
+        pName = name;
+        currentIdx_Kecerdasan = 0; timerLeft = 3600; isResultSubmitted = false;
+        simulationResult.kecerdasan = {userAns:{}, benar:0, skor:0};
+        $('k-navGrid').innerHTML = rawKecerdasan.map((_,i)=>`<button type="button" class="nav-item" id="nav-${i}" onclick="goToQ(${i})">${i+1}</button>`).join('');
+        showSection('kecerdasan'); renderQuestion(); startTimer();
+    }
+    function startTimer() {
+        if (timerInterval) clearInterval(timerInterval);
+        updateTimerDisplay();
+        timerInterval = setInterval(()=>{ timerLeft--; updateTimerDisplay(); if(timerLeft<=0){ clearInterval(timerInterval); finishSimulation(true); } },1000);
+    }
+    function updateTimerDisplay(){ const t=$('timer'); if(t) t.textContent = `${String(Math.floor(Math.max(0,timerLeft)/60)).padStart(2,'0')}:${String(Math.max(0,timerLeft)%60).padStart(2,'0')}`; }
+    function renderQuestion() {
+        const q=rawKecerdasan[currentIdx_Kecerdasan]; if(!q) return;
+        $('k-q-no').textContent=`Soal ${currentIdx_Kecerdasan+1} dari ${TOTAL_SOAL} — ${q.title}`;
+        $('k-q-text').textContent=q.q;
+        const media=$('k-q-media'); media.innerHTML=q.media||''; media.style.display=q.media?'block':'none';
+        const selected=simulationResult.kecerdasan.userAns[currentIdx_Kecerdasan];
+        $('k-options').innerHTML=q.opts.map((opt,i)=>`<button type="button" class="opt ${selected===i?'selected':''}" onclick="chooseAnswer(${i})"><span style="font-weight:900;min-width:22px">${String.fromCharCode(65+i)}.</span><span>${opt}</span></button>`).join('');
+        document.querySelectorAll('.nav-item').forEach((el,i)=>{el.classList.toggle('active',i===currentIdx_Kecerdasan);el.classList.toggle('filled',simulationResult.kecerdasan.userAns[i]!==undefined);});
+        $('k-btn-next').textContent=currentIdx_Kecerdasan===TOTAL_SOAL-1?'Selesaikan Tes':'Selanjutnya';
+    }
+    let autoNextTimeout=null;
+    function chooseAnswer(i) {
+        if(isResultSubmitted) return;
+        simulationResult.kecerdasan.userAns[currentIdx_Kecerdasan]=i; renderQuestion();
+        if(autoNextTimeout) clearTimeout(autoNextTimeout);
+        autoNextTimeout=setTimeout(()=>{ if(currentIdx_Kecerdasan<TOTAL_SOAL-1) nextQ_Kecerdasan(); else finishSimulation(false); },450);
+    }
+    function goToQ(i){ if(isResultSubmitted)return; if(autoNextTimeout)clearTimeout(autoNextTimeout); currentIdx_Kecerdasan=Math.max(0,Math.min(TOTAL_SOAL-1,i)); renderQuestion(); }
+    function prevQ_Kecerdasan(){ if(autoNextTimeout)clearTimeout(autoNextTimeout); if(currentIdx_Kecerdasan>0){currentIdx_Kecerdasan--;renderQuestion();} }
+    function nextQ_Kecerdasan(){ if(autoNextTimeout)clearTimeout(autoNextTimeout); if(currentIdx_Kecerdasan<TOTAL_SOAL-1){currentIdx_Kecerdasan++;renderQuestion();}else finishSimulation(false); }
+    async function sendResultToAppsScript(payload) {
+        if(!APP_SCRIPT_URL || APP_SCRIPT_URL.includes('GANTI_URL')) return {ok:false, message:'URL Apps Script belum diatur.'};
+        try {
+            await fetch(APP_SCRIPT_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(payload)});
+            return {ok:true, message:'Permintaan pengiriman hasil telah dikirim. Mode no-cors tidak memungkinkan browser membaca balasan server.'};
+        } catch(err) { return {ok:false,message:String(err)}; }
+    }
+    async function finishSimulation(timeout=false) {
+        if(isResultSubmitted)return;
+        isResultSubmitted=true; if(timerInterval)clearInterval(timerInterval); if(autoNextTimeout)clearTimeout(autoNextTimeout);
+        let benar=0; rawKecerdasan.forEach((q,i)=>{if(simulationResult.kecerdasan.userAns[i]===q.ans)benar++;});
+        const skor=Number((benar/TOTAL_SOAL*100).toFixed(2));
+        simulationResult.kecerdasan.benar=benar; simulationResult.kecerdasan.skor=skor;
+        $('resNamaPeserta').textContent='NAMA PESERTA: '+pName;
+        $('resValKecerdasan').textContent=skor.toFixed(2);
+        $('resDetailKecerdasan').textContent=`Jawaban Benar: ${benar} / ${TOTAL_SOAL} Soal | Tidak dijawab: ${TOTAL_SOAL-Object.keys(simulationResult.kecerdasan.userAns).length}`;
+        $('reviewNamaPeserta').textContent='PESERTA: '+pName;
+        $('reviewContainerKecerdasan').innerHTML=rawKecerdasan.map((q,i)=>{const ua=simulationResult.kecerdasan.userAns[i];const ok=ua===q.ans;return `<div class="review-item ${ok?'correct':'incorrect'}"><b>Soal ${i+1}. ${q.title}</b><p>${q.q}</p><div class="visual-container">${q.media||''}</div><p>Jawaban Anda: <b>${ua===undefined?'Tidak dijawab':String.fromCharCode(65+ua)}</b> | Kunci: <b>${String.fromCharCode(65+q.ans)}</b></p><div class="pembahasan-box">${q.exp}</div></div>`}).join('');
+        showSection('result');
+        const payload={Timestamp:new Date().toISOString(),SessionID:currentSessionId,NamaSiswa:pName,Program:'FIGURAL_SPASIAL',NamaTryout:'CAT LOGIKA FIGURAL & SPASIAL 50 SOAL',Kecerdasan:skor,Kepribadian:'',Kecermatan:'',TIU:'',TWK:'',TKP:'',PengetahuanUmum:'',NilaiAkhir:skor,JawabanBenar:benar,TotalSoal:TOTAL_SOAL,WaktuMulai:waktuMulai,WaktuSelesai:new Date().toLocaleString(),DurasiDetik:3600-timerLeft,StatusWaktuHabis:!!timeout,Jawaban:simulationResult.kecerdasan.userAns};
+        const status=await sendResultToAppsScript(payload);
+        let note=$('appsScriptStatus'); if(!note){note=document.createElement('p');note.id='appsScriptStatus';note.style.cssText='padding:12px;border-radius:8px;background:#f1f5f9;font-size:13px';$('sec-result').querySelector('.card').appendChild(note);} 
+        note.textContent=status.ok?'Pengiriman hasil ke Apps Script telah dicoba. Periksa spreadsheet MASTER untuk memastikan data masuk.':('Pengiriman Apps Script gagal: '+status.message);
+    }
+    function showReviewSection(){showSection('review');}
+    // Safety check: the provided source must contain exactly 50 questions.
+    if(rawKecerdasan.length!==TOTAL_SOAL) console.error('Jumlah soal tidak sesuai:',rawKecerdasan.length);
+</script>
+</body>
+</html>
